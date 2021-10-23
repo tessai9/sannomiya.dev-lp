@@ -1,0 +1,84 @@
+.l-header {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  left: 0;
+  background-color: rgba($monoLight, 0.8);
+  backdrop-filter: blur(3px) brightness(95%) opacity(95%);
+  padding: cs(15);
+  @include flexCenter(v);
+  justify-content: space-between;
+  transform: translateY(-100%);
+  opacity: 0;
+  @include transition(#{transform, opacity});
+
+  @include sp {
+    padding: csp(15);
+  }
+
+  &.isShown {
+    transform: translateY(0);
+    opacity: 1;
+    @include transition(#{transform, opacity});
+  }
+
+  &_logo {
+    width: cs(150);
+    @include rotateHover;
+
+    @include sp {
+      width: csp(97);
+    }
+  }
+
+  &_menubar {
+    @include wh(csp(40), csp(40));
+    display: block;
+    position: relative;
+
+    span {
+      background-color: $monoDark;
+      height: 1px;
+      position: absolute;
+      left: csp(8);
+
+      &:nth-child(1) {
+        width: csp(24);
+        top: csp(16);
+      }
+
+      &:nth-child(2) {
+        width: csp(12);
+        top: csp(24);
+      }
+    }
+  }
+
+  &_navs {
+    @include flexCenter(v);
+    justify-content: flex-end;
+
+    &_link {
+      margin-left: cs(30);
+      @include rotateHover;
+    }
+
+    &_btn {
+      margin-left: cs(30);
+      @include flexCenter(v);
+      border-radius: cs($bdrs);
+      border: 1px solid $monoDark;
+      color: $monoDark;
+      padding: cs(10) cs(16);
+      @include btnHover(rgba($monoDark, 0.1));
+
+      img {
+        margin-right: cs(12);
+        position: relative;
+        top: 1px;
+        width: cs(24);
+      }
+    }
+  }
+}

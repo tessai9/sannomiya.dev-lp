@@ -1,0 +1,145 @@
+.p-contact {
+  @include blockCenter(cs($pcContWidth));
+
+  @include sp {
+    width: 100%;
+  }
+
+  &_text {
+    line-height: 2.2;
+
+    @include sp {
+      @include fs_lh(15, 2);
+    }
+  }
+
+  &_btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: cs(30);
+
+    @include sp {
+      margin-top: csp(35);
+      flex-wrap: wrap;
+    }
+
+    &_btn {
+      @include wh(cs(255), cs(80));
+      border-radius: cs($bdrs);
+      box-shadow: 0 3px 0 $monoDark;
+      background-color: rgba($monoDark, 0.9);
+      @include flexCenter(c);
+      @include transition(#{transform, box-shadow});
+
+      @include sp {
+        @include wh(csp(165), csp(50));
+        border-radius: csp($spBdrs);
+        box-shadow: 0 2px 0 $monoDark;
+
+        &:nth-child(n + 3) {
+          margin-top: csp(15);
+        }
+      }
+
+      &.discord {
+        background-color: #5865f2;
+        box-shadow: 0 3px 0 #3a42a0;
+
+        @include sp {
+          box-shadow: 0 2px 0 #3a42a0;
+        }
+
+        @include pc {
+          &:hover {
+            @include transition(#{transform, box-shadow});
+            box-shadow: 0 0 0 #3a42a0;
+            transform: translateY(2px);
+          }
+        }
+
+        img {
+          width: cs(180);
+
+          @include sp {
+            width: csp(113);
+          }
+        }
+      }
+
+      &.slack {
+        background-color: #611f69;
+        box-shadow: 0 3px 0 #430f4a;
+
+        @include sp {
+          box-shadow: 0 2px 0 #430f4a;
+        }
+
+        @include pc {
+          &:hover {
+            @include transition(#{transform, box-shadow});
+            box-shadow: 0 0 0 #430f4a;
+            transform: translateY(2px);
+          }
+        }
+
+        img {
+          width: cs(140);
+
+          @include sp {
+            width: csp(87);
+          }
+        }
+      }
+
+      &.connpass {
+        background-color: #ececec;
+        box-shadow: 0 3px 0 #d1d1d1;
+
+        @include sp {
+          box-shadow: 0 2px 0 #d1d1d1;
+        }
+
+        @include pc {
+          &:hover {
+            @include transition(#{transform, box-shadow});
+            box-shadow: 0 0 0 #d1d1d1;
+            transform: translateY(2px);
+          }
+        }
+
+        img {
+          width: cs(178);
+
+          @include sp {
+            width: csp(107);
+          }
+        }
+      }
+
+      &.scrapbox {
+        background-color: #fafafa;
+        box-shadow: 0 3px 0 #e0e0e0;
+
+        @include sp {
+          box-shadow: 0 2px 0 #e0e0e0;
+        }
+
+        @include pc {
+          &:hover {
+            @include transition(#{transform, box-shadow});
+            box-shadow: 0 0 0 #e0e0e0;
+            transform: translateY(2px);
+          }
+        }
+
+        img {
+          width: cs(156);
+
+          @include sp {
+            width: csp(106);
+          }
+        }
+      }
+    }
+  }
+}

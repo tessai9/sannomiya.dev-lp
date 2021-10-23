@@ -1,0 +1,19 @@
+.c-head {
+  @include fs(120);
+  @include ja(l);
+  color: rgba($monoDark, 0.1);
+  margin: 0 auto;
+  padding: cs(160) 0 cs(90);
+  @include blockCenter(cs($pcContWidth));
+
+  @include sp {
+    width: 100%;
+    padding: csp(80) 0 csp(45);
+    color: rgba($monoDark, 0.2);
+    @include fs(50);
+
+    &-spS {
+      @include fs(40);
+    }
+  }
+}

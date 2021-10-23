@@ -1,0 +1,304 @@
+.p-request {
+  &_detail {
+    margin-top: cs(90);
+
+    @include sp {
+      margin-top: csp(45);
+    }
+
+    &_title {
+      @include flexCenter(v);
+      width: cs(454);
+      padding-right: cs(30);
+      @include fs_lh(22, 1.6);
+      @include ja(u);
+      color: $monoLight;
+      background: linear-gradient(to right, #ff9710, #ff9610 40%, #ffc400);
+      border-radius: 100vw;
+      margin: 0 auto cs(50);
+      position: relative;
+      z-index: 1;
+
+      @include sp {
+        width: 100%;
+        padding-right: csp(30);
+        @include fs(16);
+        margin-bottom: csp(40);
+        background: #ff9610;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+      }
+
+      &:before {
+        display: block;
+        @include bgImg(cs(99), cs(99), "../img/icon_check.svg");
+        margin-right: cs(16);
+
+        @include sp {
+          @include wh(csp(79), csp(79));
+          margin-right: csp(14);
+        }
+      }
+
+      &:after {
+        @include wh(4px, cs(50));
+        background-color: #ff9b0e;
+        @include absCenter(h);
+        bottom: 0;
+        transform: translateY(100%);
+
+        @include sp {
+          @include wh(3px, csp(438));
+          background: linear-gradient(to bottom, #ff9e0d, #ffb106 40%, #ffc200);
+          left: csp(40);
+          right: unset;
+          top: csp(79);
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &_lists {
+      @include blockCenter(cs($pcContWidth));
+      display: flex;
+      justify-content: space-between;
+
+      @include sp {
+        width: auto;
+        flex-flow: column;
+        align-items: flex-end;
+      }
+    }
+
+    &_list {
+      width: cs(332);
+      border: 4px solid $monoDark;
+      border-radius: cs($bdrs * 2);
+      @include flexCenter(v);
+      flex-flow: column;
+      padding: cs(4) cs(16) cs(16);
+      background-color: $monoLight;
+      position: relative;
+
+      @include sp {
+        width: csp(232);
+        margin-right: csp(30);
+        border-width: 3px;
+        padding: 0 csp(15) csp(15);
+        border-radius: csp(6);
+
+        &:not(:last-child) {
+          margin-bottom: csp(40);
+        }
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        @include absCenter(h);
+
+        @include sp {
+          inset: unset;
+        }
+      }
+
+      &:before {
+        top: -2px;
+        @include wh(cs(23), cs(23));
+        border-radius: 100vw;
+        border: 4px solid $monoDark;
+        transform: translateY(-50%);
+        background-color: $monoLight;
+
+        @include sp {
+          @include wh(csp(21), csp(21));
+          border-width: 3px;
+          transform: translateY(0);
+          @include absCenter(v);
+          left: csp(-55);
+          background-color: $monoLight;
+          z-index: 999;
+        }
+      }
+
+      @include sp {
+        &:after {
+          @include wh(csp(44), 3px);
+          background-color: $monoDark;
+          @include absCenter(v);
+          left: 0;
+          transform: translateX(-100%);
+          content: "";
+        }
+      }
+
+      &.first,
+      &.third {
+        &:after {
+          @include pc {
+            @include wh(cs(152), cs(92));
+            top: calc(-4px + #{cs(-8)});
+            border: 4px solid $monoDark;
+            border-bottom: none;
+          }
+        }
+      }
+
+      &.first {
+        border-color: #ff9710;
+
+        @include sp {
+          border-color: #ff9e0d;
+        }
+
+        &:before {
+          border-color: #ff9710;
+
+          @include sp {
+            border-color: #ff9e0d;
+          }
+        }
+
+        &:after {
+          @include pc {
+            transform: translateX(50%) translateY(-100%);
+            border-top-left-radius: cs($bdrs * 2);
+            border-color: #ff9710;
+            border-right: none;
+            left: cs(-3);
+          }
+
+          @include sp {
+            background-color: #ff9e0d;
+          }
+        }
+      }
+
+      &.second {
+        border-color: #ff9610;
+        z-index: 1;
+
+        @include sp {
+          border-color: #ffb106;
+        }
+
+        &:before {
+          border-color: #ff9610;
+
+          @include sp {
+            border-color: #ffb106;
+          }
+        }
+
+        &:after {
+          @include sp {
+            background-color: #ffb106;
+          }
+        }
+      }
+
+      &.third {
+        border-color: #ffc400;
+
+        @include sp {
+          border-color: #ffc200;
+        }
+
+        &:before {
+          border-color: #ffc400;
+
+          @include sp {
+            border-color: #ffc200;
+          }
+        }
+
+        &:after {
+          @include pc {
+            transform: translateX(-50%) translateY(-100%);
+            border-top-right-radius: cs($bdrs * 2);
+            border-color: #ffc400;
+            border-left: none;
+            right: cs(-3);
+          }
+
+          @include sp {
+            background-color: #ffc200;
+          }
+        }
+      }
+
+      .head {
+        @include fs(18);
+        @include ja(u);
+        transform: translateY(50%);
+
+        @include sp {
+          @include fs(13);
+        }
+
+        &.first {
+          color: #ff9710;
+
+          @include sp {
+            color: #ff9e0d;
+          }
+        }
+        &.second {
+          color: #ff9610;
+
+          @include sp {
+            color: #ffb106;
+          }
+        }
+        &.third {
+          color: #ffc400;
+
+          @include sp {
+            color: #ffc200;
+          }
+        }
+      }
+
+      .title {
+        padding: cs(27) cs(20) cs(18);
+        @include fs_lh(18, 1.7);
+        @include flexCenter(c);
+        @include wh(100%, 100%);
+        border-radius: 0 0 cs($bdrs) cs($bdrs);
+
+        @include sp {
+          padding: csp(24) csp(10);
+          @include fs(14);
+          border-radius: 0 0 csp($spBdrs) csp($spBdrs);
+        }
+
+        &.first {
+          background-color: rgba(#ff9710, 0.1);
+
+          @include sp {
+            background-color: rgba(#ff9e0d, 0.1);
+          }
+        }
+
+        &.second {
+          background-color: rgba(#ff9610, 0.08);
+
+          @include sp {
+            background-color: rgba(#ffb106, 0.08);
+          }
+        }
+
+        &.third {
+          background-color: rgba(#ffc400, 0.1);
+
+          @include sp {
+            background-color: rgba(#ffc200, 0.1);
+          }
+        }
+      }
+    }
+  }
+}

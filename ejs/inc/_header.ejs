@@ -1,0 +1,21 @@
+<% include('../lib/_link') %>
+<header class='l-header js-header'>
+  <a href='' class="l-header_logo">
+    <img src='<%=path%>assets/img/logo_c.svg' alt='三宮.dev'>
+  </a>
+
+  <a href='' class='l-header_menubar u-sp js-menubar'>
+    <span></span>
+    <span></span>
+  </a>
+
+  <nav class="l-header_navs u-pc">
+    <% navLink[0].forEach(function(link){ %>
+      <a href='#<%=link[0]%>' class='l-header_navs_link'><%=link[1]%></a>
+    <% }) %>
+    <a href='<%=navLink[1][0]%>' class="l-header_navs_btn">
+      <img src='<%=path%>assets/img/icon_slack_b.svg' alt=''>
+      <%=navLink[1][1]%>
+    </a>
+  </nav>
+</header>

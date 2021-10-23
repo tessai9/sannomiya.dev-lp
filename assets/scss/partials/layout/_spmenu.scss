@@ -1,0 +1,55 @@
+.l-spmenu {
+  @include wh(100%, 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $gra1;
+  z-index: 99999;
+  padding: csp(60) csp(63);
+  color: $monoLight;
+  display: none;
+
+  &_links {
+    display: flex;
+    flex-flow: column;
+
+    &_link {
+      display: block;
+      text-align: center;
+      padding: csp(20) 0;
+      border-bottom: 1px solid $monoLight;
+      @include fs(20);
+      &:nth-child(4) {
+        border-bottom: none;
+      }
+    }
+
+    &_btn {
+      margin-top: csp(33);
+      border: 1px solid $monoLight;
+      border-radius: csp($spBdrs);
+      @include wh(100%, csp(58));
+      @include flexCenter(c);
+      @include fs(18);
+      @include ja(db);
+
+      img {
+        width: csp(30);
+        margin-right: csp(15);
+      }
+    }
+  }
+
+  &_close {
+    @include fs(18);
+    @include ja(db);
+    text-align: center;
+    display: block;
+    margin-top: csp(60);
+
+    span {
+      @include fs(20);
+      @include ja(b);
+    }
+  }
+}

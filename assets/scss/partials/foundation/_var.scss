@@ -1,0 +1,35 @@
+// 幅
+$pc: 1366;
+$sp: 375;
+$bp: 768;
+$pcWidth: $pc;
+$pcContWidth: 1080;
+
+// 高さ
+
+// マージン
+
+// パディング
+$spd: 15;
+$smg: 15;
+
+$bdrs: 4;
+$spBdrs: 3;
+
+// カラー
+$monoDark: #3d2a0e;
+$monoLight: #fff;
+$mainColorDark: #e23a00;
+$mainColor: #ff9610;
+$accentColor2: #88de24;
+$accentColor3: #389bd9;
+$bgColor: #fafafa;
+
+$gra1: linear-gradient(61deg, $mainColorDark, #ff9710);
+$gra2: linear-gradient(61deg, #168ed9, $accentColor2);
+
+// letter spacing
+$ls_01: 0.2rem;
+$ls_02: 0.4rem;
+
+$transTime: 0.3s;

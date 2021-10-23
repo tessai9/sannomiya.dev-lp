@@ -1,0 +1,53 @@
+.p-inquire {
+  margin-top: cs(113);
+
+  @include sp {
+    margin-top: csp(62);
+  }
+
+  &_text {
+    margin-top: cs(-10);
+    @include fs_lh(18, 2);
+
+    @include sp {
+      margin-top: 0;
+      @include fs(15);
+    }
+  }
+
+  &_btn {
+    box-shadow: 0 2px 0 #430f4a;
+    border-radius: cs($bdrs);
+    @include wh(cs(287), cs(49));
+    @include flexCenter(c);
+    padding: cs(22) cs(12);
+    @include colorSet($monoLight, #611f69);
+    margin: cs(40) auto 0;
+    @include transition(#{transform, box-shadow});
+
+    @include sp {
+      border-radius: csp($bdrs);
+      @include wh(csp(260), csp(46));
+      padding: csp(12) csp(20);
+      margin-top: csp(30);
+      @include fs(14);
+      @include ja(db);
+    }
+
+    &:hover {
+      @include transition(#{transform, box-shadow});
+      box-shadow: 0 0 0 #430f4a;
+      transform: translateY(2px);
+    }
+
+    img {
+      margin-right: cs(12);
+      position: relative;
+      top: 2px;
+
+      @include sp {
+        margin-right: csp(10);
+      }
+    }
+  }
+}

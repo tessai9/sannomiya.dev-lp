@@ -1,0 +1,224 @@
+.p-concept {
+  margin-top: cs(15);
+  border-radius: cs($bdrs);
+  background: linear-gradient($accentColor3, $accentColor2, $mainColorDark);
+  padding: cs(4);
+
+  @include sp {
+    padding: 2px;
+    margin-top: csp($smg);
+    border-radius: csp($spBdrs);
+  }
+
+  &_inner {
+    border-radius: cs($bdrs / 2);
+    background-color: $monoLight;
+    padding-top: cs(80);
+    padding-bottom: cs(228);
+    background-image: url(../img/fig_concept_pc.png);
+    background-repeat: no-repeat;
+    background-size: auto cs(228);
+    background-position: bottom center;
+
+    @include sp {
+      border-radius: 2px;
+      padding: csp(30) csp(40) csp(97);
+      background-image: url(../img/fig_concept_sp.png);
+      background-size: 81%;
+    }
+  }
+
+  &_voices {
+    @include blockCenter(cs($pcContWidth));
+    background-color: $bgColor;
+    border-radius: cs($bdrs);
+    padding: cs(70) 0;
+    @include flexCenter(c);
+    flex-wrap: wrap;
+    position: relative;
+
+    @include sp {
+      width: 100%;
+      border-radius: csp($spBdrs);
+      padding: csp(30) 0;
+    }
+
+    &:after {
+      content: "";
+      @include absCenter(h);
+      @include wh(0, 0);
+      border-width: cs(67) cs(240);
+      border-color: $bgColor transparent transparent transparent;
+      border-style: solid;
+      bottom: 0;
+      transform: translateY(100%);
+
+      @include sp {
+        border-width: csp(36) csp(116 / 2);
+      }
+    }
+  }
+
+  &_voice {
+    text-align: center;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+
+    &:before {
+      left: cs(25);
+      top: cs(26);
+
+      @include sp {
+        left: csp(15);
+        top: csp(15);
+      }
+    }
+
+    &:after {
+      right: cs(25);
+      bottom: cs(26);
+
+      @include sp {
+        right: csp(15);
+        bottom: csp(15);
+      }
+    }
+
+    span {
+      text-align: center;
+      background-color: $monoLight;
+      border-radius: cs($bdrs);
+      box-shadow: 0 cs(10) cs(20) rgba($monoDark, 0.03);
+      display: inline-block;
+      padding: cs(33) cs(57);
+      @include fs(24);
+      @include ja(b);
+
+      @include sp {
+        border-radius: csp($spBdrs);
+        box-shadow: 0 csp(5) csp(10) rgba($monoDark, 0.03);
+        padding: csp(32) csp(30);
+        @include fs(16);
+        width: 100%;
+        text-align: left;
+      }
+    }
+
+    &:nth-child(1) {
+      margin-bottom: cs(40);
+      color: $accentColor3;
+
+      @include sp {
+        margin-bottom: csp(30);
+        transform: translateX(csp(-30));
+      }
+
+      &:before {
+        @include bgImg(cs(22), cs(17), "../img/icon_quote_b1.svg");
+
+        @include sp {
+          @include wh(csp(15), csp(11));
+        }
+      }
+
+      &:after {
+        @include bgImg(cs(22), cs(17), "../img/icon_quote_b2.svg");
+
+        @include sp {
+          @include wh(csp(15), csp(11));
+        }
+      }
+
+      span {
+        width: cs(620);
+
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+
+    &:nth-child(2),
+    &:nth-child(3) {
+      span {
+        width: cs(450);
+
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      color: $mainColorDark;
+      margin-right: cs(40);
+
+      @include sp {
+        margin-right: 0;
+        margin-bottom: csp(30);
+        transform: translateX(csp(30));
+      }
+
+      &:before {
+        @include bgImg(cs(22), cs(17), "../img/icon_quote_r1.svg");
+
+        @include sp {
+          @include wh(csp(15), csp(11));
+        }
+      }
+
+      &:after {
+        @include bgImg(cs(22), cs(17), "../img/icon_quote_r2.svg");
+
+        @include sp {
+          @include wh(csp(15), csp(11));
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      color: $accentColor2;
+
+      @include sp {
+        transform: translateX(csp(-30));
+      }
+
+      &:before {
+        @include bgImg(cs(22), cs(17), "../img/icon_quote_g1.svg");
+
+        @include sp {
+          @include wh(csp(15), csp(11));
+        }
+      }
+
+      &:after {
+        @include bgImg(cs(22), cs(17), "../img/icon_quote_g2.svg");
+
+        @include sp {
+          @include wh(csp(15), csp(11));
+        }
+      }
+    }
+  }
+
+  &_copy {
+    margin-top: cs(117);
+    text-align: center;
+    color: #d8d8d8;
+    @include fs_lh(40, 2);
+    @include ja(db);
+
+    @include sp {
+      margin-top: csp(61);
+      @include fs_lh(20, 1.8);
+      @include ja(r);
+      text-align: left;
+      color: #9f9f9f;
+    }
+  }
+}

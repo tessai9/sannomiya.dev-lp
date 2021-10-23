@@ -1,0 +1,189 @@
+.p-what {
+  margin-bottom: cs(90);
+
+  @include sp {
+    margin-bottom: csp(45);
+    padding: 0;
+  }
+
+  &_commu {
+    @include blockCenter(cs($pcContWidth));
+    margin-top: cs(90);
+
+    @include sp {
+      width: 100%;
+      margin-top: csp(45);
+    }
+
+    &_title {
+      @include flexCenter(h);
+      margin-bottom: cs(49);
+      position: relative;
+
+      @include sp {
+        @include fs(17);
+        margin: csp(30);
+      }
+
+      &:after {
+        content: "";
+        @include absCenter(h);
+        @include wh(2px, cs(49));
+        background-color: $monoDark;
+        bottom: 1px;
+        transform: translateY(100%);
+
+        @include sp {
+          @include wh(1px, csp(30));
+        }
+      }
+
+      span {
+        @include fs(22);
+        padding: cs(12) cs(30);
+        text-align: center;
+        border: 2px solid $monoDark;
+        border-radius: cs($bdrs);
+        position: relative;
+
+        @include sp {
+          @include fs(17);
+          padding: csp(10) csp(50);
+          border-width: 1px;
+          border-radius: csp($spBdrs);
+        }
+
+        &:before,
+        &:after {
+          position: absolute;
+          top: cs(32);
+          border: 2px solid $monoDark;
+          content: "";
+          @include wh(cs(168), cs(81));
+          border-bottom: none;
+
+          @include sp {
+            display: none;
+          }
+        }
+
+        &:before {
+          border-top-left-radius: cs($bdrs);
+          border-right: none;
+          left: 0;
+          transform: translateX(-100%);
+        }
+
+        &:after {
+          border-top-right-radius: cs($bdrs);
+          border-left: none;
+          right: 0;
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    &_lists {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -2px;
+
+      @include sp {
+        flex-flow: column;
+      }
+    }
+
+    &_list {
+      width: cs(332);
+      border: 2px solid $monoDark;
+      border-radius: cs($bdrs);
+      overflow: hidden;
+      flex-flow: column;
+
+      @include sp {
+        width: 100%;
+        border-width: 1px;
+        border-radius: csp($spBdrs);
+        overflow: visible;
+
+        &:not(:last-child) {
+          position: relative;
+          margin-bottom: csp(30);
+
+          &:after {
+            @include absCenter(h);
+            content: "";
+            background-color: $monoDark;
+            bottom: 0;
+            transform: translateY(100%);
+            @include wh(1px, csp(30));
+          }
+        }
+      }
+    }
+
+    &_image {
+      @include flexCenter(c);
+      background-color: #fffbf8;
+      height: cs(209);
+
+      @include sp {
+        height: csp(195);
+        border-top-left-radius: csp($spBdrs);
+        border-top-right-radius: csp($spBdrs);
+      }
+
+      img {
+        &.first {
+          width: cs(184);
+
+          @include sp {
+            width: csp(180);
+          }
+        }
+
+        &.second {
+          width: cs(197);
+
+          @include sp {
+            width: csp(171);
+          }
+        }
+
+        &.third {
+          width: cs(171);
+
+          @include sp {
+            width: csp(178);
+          }
+        }
+      }
+    }
+
+    &_text {
+      height: 100%;
+      background-color: $monoLight;
+      line-height: 2.2;
+      padding: cs(20) cs(30);
+
+      @include sp {
+        padding: csp(30);
+        border-bottom-left-radius: csp($spBdrs);
+        border-bottom-right-radius: csp($spBdrs);
+      }
+
+      em {
+        @include fs(11);
+        @include ja(b);
+        font-style: normal;
+        color: $mainColor;
+
+        @include sp {
+          @include fs(12);
+          @include ja(db);
+          display: block;
+        }
+      }
+    }
+  }
+}

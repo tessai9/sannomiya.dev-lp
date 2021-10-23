@@ -1,0 +1,66 @@
+.p-leader {
+  &_detail {
+    @include flexCenter(v);
+    justify-content: space-between;
+
+    @include sp {
+      flex-flow: column;
+      align-items: flex-start;
+    }
+
+    &_thumb {
+      width: cs(180);
+      overflow: hidden;
+      border-radius: cs($bdrs);
+
+      @include sp {
+        width: csp(190);
+        border-radius: csp($spBdrs);
+        margin-bottom: csp(21);
+      }
+    }
+
+    &_info {
+      width: cs(570);
+
+      @include sp {
+        width: 100%;
+      }
+    }
+
+    &_meta {
+      @include flexCenter(v);
+      margin-bottom: cs(10);
+
+      @include sp {
+        margin-bottom: csp(21);
+      }
+
+      .name {
+        @include fs(24);
+        @include ja(u);
+        margin-right: cs(20);
+
+        @include sp {
+          @include fs_lh(28, 1);
+          margin-right: csp(25);
+        }
+      }
+
+      .sns {
+        width: cs(30);
+        margin-right: cs(10);
+        @include rotateHover;
+
+        @include sp {
+          width: csp(30);
+          margin-right: csp(10);
+        }
+      }
+    }
+
+    &_text {
+      @include fs_lh(14, 2);
+    }
+  }
+}

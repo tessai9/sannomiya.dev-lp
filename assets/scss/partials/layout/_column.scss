@@ -1,0 +1,32 @@
+.l-column {
+  @include blockCenter(cs(860));
+  border-radius: cs($bdrs);
+  background-color: $monoLight;
+  box-shadow: 0 cs(10) cs(20) rgba($monoDark, 0.06);
+  padding: 0 cs(40) cs(40);
+
+  @include sp {
+    width: 100%;
+    border-radius: csp($spBdrs);
+    box-shadow: 0 csp(5) csp(10) rgba($monoDark, 0.06);
+    padding: 0 csp(20) csp(25);
+  }
+
+  &_title {
+    margin-bottom: cs(7);
+    @include colorSet($monoLight, $monoDark);
+    border-radius: cs($bdrs);
+    padding: cs(8) cs(30) cs(10);
+    @include fs(20);
+    @include ja(b);
+    display: inline-block;
+    transform: translateY(-50%);
+
+    @include sp {
+      border-radius: csp($spBdrs);
+      @include fs(15);
+      margin-bottom: csp(8);
+      padding: csp(6) csp(20) csp(8);
+    }
+  }
+}

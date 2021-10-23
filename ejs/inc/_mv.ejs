@@ -1,0 +1,35 @@
+<section class='p-mv'>
+  <% include('../lib/_link') %>
+  <header class='p-mv_header'>
+    <a href='' class="p-mv_header_logo">
+      <img src='<%=path%>assets/img/logo_w.svg' alt='三宮.dev'>
+    </a>
+
+    <a href='' class='p-mv_header_menubar u-sp js-menubar'>
+      <span></span>
+      <span></span>
+    </a>
+
+    <nav class="p-mv_header_navs u-pc">
+      <% navLink[0].forEach(function(link){ %>
+        <a href='#<%=link[0]%>' class='p-mv_header_link'><%=link[1]%></a>
+      <% }) %>
+      <a href='<%=navLink[1][0]%>' class="p-mv_header_btn">
+        <img src='<%=path%>assets/img/icon_slack_w.svg' alt=''>
+        <%=navLink[1][1]%>
+      </a>
+    </nav>
+  </header>
+
+  <h1 class='p-mv_title'>
+    <span>三宮.devに参加して、<br class="u-pc">
+      IT知識を共有しましょう！</span>
+  </h1>
+
+  <article class="p-mv_event js-newEvent">
+    <p class='p-mv_event_title'>三宮.devの最新イベント</p>
+    <p class='p-mv_event_date'>2021.9.5(SUN) 14:00〜17:00</p>
+    <h2 class='p-mv_event_name'>【三宮.dev オンライン】Web制作ってどうやってるの？案件ロールプレイング 制作編</h2>
+    <a href='' class='c-btn'>イベントへ参加する</a>
+  </article>
+</section>

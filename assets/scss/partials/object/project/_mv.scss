@@ -1,0 +1,195 @@
+.p-mv {
+  background: url(../img/bg_mv_pc.svg) no-repeat bottom center/100%,
+    $gra1 no-repeat;
+  border-radius: cs($bdrs);
+  padding: cs(30) cs(30) cs(54);
+
+  @include sp {
+    padding: csp($spd) csp($spd) csp(38);
+    border-radius: csp($spBdrs);
+    background: url(../img/bg_mv_sp.svg) no-repeat top csp(97) center/100%,
+      $gra1 no-repeat;
+  }
+
+  &_header {
+    @include flexCenter(v);
+    justify-content: space-between;
+    margin-bottom: cs(123);
+
+    @include sp {
+      margin-bottom: csp(20);
+    }
+
+    &_logo {
+      width: cs(150);
+      @include rotateHover;
+
+      @include sp {
+        width: csp(97);
+      }
+    }
+
+    &_menubar {
+      @include wh(csp(40), csp(40));
+      display: block;
+      position: relative;
+
+      span {
+        background-color: $monoLight;
+        height: 1px;
+        position: absolute;
+        left: csp(8);
+
+        &:nth-child(1) {
+          width: csp(24);
+          top: csp(16);
+        }
+
+        &:nth-child(2) {
+          width: csp(12);
+          top: csp(24);
+        }
+      }
+    }
+
+    &_navs {
+      @include flexCenter(v);
+    }
+
+    &_link {
+      margin-left: cs(30);
+      color: $monoLight;
+      @include rotateHover;
+    }
+
+    &_btn {
+      margin-left: cs(30);
+      @include flexCenter(v);
+      border: 1px solid $monoLight;
+      color: $monoLight;
+      padding: cs(12) cs(24);
+      border-radius: cs($bdrs);
+      @include btnHover(rgba($monoLight, 0.2));
+
+      img {
+        width: cs(24);
+        margin-right: cs(12);
+      }
+    }
+  }
+
+  &_title {
+    @include flexCenter(v);
+    @include ja(l);
+    @include fs_lh(68, 1.47);
+    color: $monoLight;
+
+    @include sp {
+      @include fs_lh(34, 1.6);
+      display: block;
+
+      &:after {
+        clear: both;
+        content: "";
+        display: block;
+      }
+    }
+
+    &:before {
+      content: "";
+      margin-right: cs(30);
+      @include bgImg(cs(168), cs(168), "../img/fig_badge.svg");
+
+      @include sp {
+        float: left;
+        @include wh(csp(86), csp(86));
+        margin-right: csp(16);
+        transform: translateY(csp(16));
+      }
+    }
+  }
+
+  &_event {
+    margin: cs(82) 0 0 auto;
+    padding: 0 cs(30);
+    width: cs(373);
+    border: 2px solid $monoDark;
+    border-radius: cs($bdrs);
+    background-color: rgba($monoLight, 0.7);
+    display: flex;
+    flex-flow: column;
+
+    @include sp {
+      margin-top: csp(53);
+      padding: 0 csp(25);
+      width: 100%;
+      border-radius: csp($spBdrs);
+      border-width: 1px;
+    }
+
+    &_title {
+      display: inline-flex;
+      margin: 0 auto;
+      @include colorSet($monoLight, $monoDark);
+      border-radius: 0 0 cs($bdrs) cs($bdrs);
+      padding: cs(2) cs(18) cs(6);
+      @include fs(15);
+
+      @include sp {
+        border-radius: 0 0 csp($spBdrs) csp($spBdrs);
+        padding: csp(4) cs(18) csp(6);
+        @include fs(12);
+      }
+
+      &:before,
+      &:after {
+        content: "・";
+        @include ja(b);
+
+        @include sp {
+          @include ja(l);
+        }
+      }
+
+      &:before {
+        margin-right: cs(5);
+
+        @include sp {
+          margin-right: csp(8);
+        }
+      }
+
+      &:after {
+        margin-left: cs(5);
+
+        @include sp {
+          margin-left: csp(8);
+        }
+      }
+    }
+
+    &_date {
+      padding: cs(9) 0;
+      @include fs(12);
+      @include ja(db);
+      border-bottom: 1px solid $monoDark;
+
+      @include sp {
+        padding: csp(12) 0;
+        @include fs(14);
+        @include ja(m);
+        border-bottom: 1px dotted $monoDark;
+      }
+    }
+
+    &_name {
+      @include fs_lh(18, 1.7);
+      margin-top: cs(12);
+
+      @include sp {
+        @include fs(16);
+        margin-top: csp(16);
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+.p-event {
+  &_lists {
+    @include blockCenter(cs($pcContWidth));
+    border: 2px solid $monoDark;
+    border-radius: cs($bdrs);
+    display: flex;
+    flex-wrap: wrap;
+
+    @include sp {
+      width: 100%;
+      border-width: 1px;
+      border-radius: csp($spBdrs);
+    }
+  }
+
+  &_list {
+    width: 50%;
+    padding: cs(12);
+    overflow: hidden;
+
+    @include sp {
+      width: 100%;
+      padding: csp(10);
+    }
+
+    &:nth-child(odd) {
+      border-right: 2px solid $monoDark;
+
+      @include sp {
+        border-right: none;
+      }
+    }
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      border-bottom: 2px solid $monoDark;
+
+      @include sp {
+        border-width: 1px;
+      }
+    }
+
+    &:nth-child(3) {
+      @include sp {
+        border-bottom: 1px solid $monoDark;
+      }
+    }
+
+    &_inner {
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      padding: 0 cs(30) cs(30);
+
+      @include sp {
+        padding: 0 csp(20) csp(24);
+      }
+
+      &.first {
+        background-color: #fff3ef;
+        border-top-left-radius: cs($bdrs);
+
+        @include sp {
+          border-top-left-radius: csp($spBdrs);
+          border-top-right-radius: csp($spBdrs);
+        }
+      }
+      &.second {
+        background-color: #edf8ff;
+        border-top-right-radius: cs($bdrs);
+
+        @include sp {
+          border-radius: 0;
+        }
+      }
+      &.third {
+        background-color: #ecffd6;
+        border-bottom-left-radius: cs($bdrs);
+
+        @include sp {
+          border-radius: 0;
+        }
+      }
+      &.fourth {
+        background-color: #fff9f2;
+        border-bottom-right-radius: cs($bdrs);
+
+        @include sp {
+          border-bottom-left-radius: csp($spBdrs);
+          border-bottom-right-radius: csp($spBdrs);
+        }
+      }
+    }
+
+    &_title {
+      color: $monoLight;
+      @include fs(15);
+      @include ja(b);
+      padding: cs(3) cs(30) cs(6);
+      text-align: center;
+      border-bottom-left-radius: cs($bdrs);
+      border-bottom-right-radius: cs($bdrs);
+      transform: translateY(cs(-12));
+
+      @include sp {
+        padding: csp(6) csp(30) csp(8);
+        transform: translateY(csp(-10));
+        border-bottom-left-radius: csp($spBdrs);
+        border-bottom-right-radius: csp($spBdrs);
+      }
+
+      &.first {
+        background-color: $mainColorDark;
+      }
+      &.second {
+        background-color: $accentColor3;
+      }
+      &.third {
+        background-color: $accentColor2;
+      }
+      &.fourth {
+        background-color: $mainColor;
+      }
+    }
+
+    &_info {
+      margin-top: cs(10);
+      width: 100%;
+
+      @include sp {
+        margin-top: csp(10);
+      }
+
+      &:last-child {
+        border-top: 2px dotted $monoDark;
+        margin-top: cs(16);
+        padding-top: cs(20);
+
+        @include sp {
+          border-width: 1px;
+          margin-top: csp(20);
+          padding-top: csp(24);
+        }
+      }
+
+      span {
+        display: block;
+
+        &.date {
+          @include fs(10);
+          @include ja(db);
+
+          @include sp {
+            @include ja(db);
+          }
+        }
+
+        &.title {
+          @include fs_lh(14, 2);
+          margin-top: cs(6);
+
+          &.twoRow {
+            height: cs(54);
+
+            @include sp {
+              height: unset;
+            }
+          }
+
+          @include sp {
+            margin-top: csp(6);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<% include('../lib/_link') %>
+<div class="l-spmenu u-sp js-menu">
+  <div class="l-spmenu_inner">
+    <nav class="l-spmenu_links">
+      <% navLink[0].forEach(function(link){ %>
+        <a href='#<%=link[0]%>' class='l-spmenu_links_link'><%=link[1]%></a>
+      <% }) %>
+      <a href='<%=navLink[1][0]%>' class="l-spmenu_links_btn">
+        <img src='<%=path%>assets/img/icon_slack_w.svg' alt=''>
+        <%=navLink[1][1]%>
+      </a>
+    </nav>
+
+    <a href='' class="l-spmenu_close js-menuclose"><span>×</span>&emsp;CLOSE</a>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+  word-break: break-all;
+  @include ja(m);
+  padding: cs(15);
+  @include fs(16);
+  background: url(../img/bg_grid.png);
+  background-size: cs(30);
+  background-attachment: fixed;
+  color: $monoDark;
+
+  @include sp {
+    background-size: csp(20);
+    padding: csp($spd);
+  }
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+a,
+input,
+button {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+input,
+textarea {
+  outline: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a[href*="tel"] {
+  @include pc {
+    pointer-events: none;
+    cursor: default;
+  }
+}

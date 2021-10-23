@@ -1,0 +1,17 @@
+.l-footer {
+  margin-top: cs(160);
+  border-radius: cs($bdrs);
+  color: $monoLight;
+  background: $gra1;
+  @include fs(14);
+  @include ja(u);
+  text-align: center;
+  padding: cs(16) 0;
+
+  @include sp {
+    margin-top: csp(82);
+    border-radius: csp($spBdrs);
+    @include fs(12);
+    padding: csp(8) 0;
+  }
+}

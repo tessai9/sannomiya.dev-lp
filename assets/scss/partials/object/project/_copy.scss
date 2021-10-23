@@ -1,0 +1,21 @@
+.p-copy {
+  margin-bottom: cs(113);
+  background: url(../img/bg_copy_pc.png) no-repeat bottom center/cover,
+    $gra1 no-repeat;
+  padding: cs(76) 0;
+  text-align: center;
+  @include fs_lh(40, 1.7);
+  color: $monoLight;
+  @include ja(db);
+  border-radius: cs($bdrs);
+
+  @include sp {
+    margin-bottom: csp(62);
+    padding: csp(48) csp(25) csp(62);
+    @include fs(24);
+    border-radius: csp($spBdrs);
+    text-align: left;
+    background: url(../img/bg_copy_sp.png) no-repeat bottom center/cover,
+      $gra1 no-repeat;
+  }
+}

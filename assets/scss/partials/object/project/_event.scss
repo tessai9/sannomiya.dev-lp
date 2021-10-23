@@ -104,7 +104,7 @@
       transform: translateY(cs(-12));
 
       @include sp {
-        padding: csp(6) csp(30) csp(8);
+        padding: csp(6) csp(25) csp(8);
         transform: translateY(csp(-10));
         border-bottom-left-radius: csp($spBdrs);
         border-bottom-right-radius: csp($spBdrs);

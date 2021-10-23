@@ -27,7 +27,7 @@
 
     @include sp {
       border-radius: csp($bdrs);
-      @include wh(csp(260), csp(46));
+      @include wh(csp(270), csp(46));
       padding: csp(12) csp(20);
       margin-top: csp(30);
       @include fs(14);

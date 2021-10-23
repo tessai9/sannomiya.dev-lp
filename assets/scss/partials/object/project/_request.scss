@@ -51,7 +51,7 @@
         transform: translateY(100%);
 
         @include sp {
-          @include wh(3px, csp(438));
+          @include wh(3px, csp(448));
           background: linear-gradient(to bottom, #ff9e0d, #ffb106 40%, #ffc200);
           left: csp(40);
           right: unset;

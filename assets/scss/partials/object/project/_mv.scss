@@ -1,3 +1,6 @@
+@use '../../foundation/var' as *;
+@use '../../foundation/mixin' as *;
+
 .p-mv {
   background: url(../img/bg_mv_pc.svg) no-repeat bottom center/100%,
     $gra1 no-repeat;

@@ -35,8 +35,10 @@ ol {
   list-style: none;
 }
 
-a:not() {
-  text-decoration-skip-ink: auto;
+a {
+  :not(&) {
+    text-decoration-skip-ink: auto;
+  }
 }
 
 img {

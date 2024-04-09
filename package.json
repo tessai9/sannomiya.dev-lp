@@ -1,18 +1,18 @@
 {
-  "name": "",
+  "name": "sannomiya.dev-lp",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
   "scripts": {
+    "dev": "sass --watch assets/scss:assets/css --style=compressed --source-map",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "ejs ejs/index.ejs -o ./index.html",
+    "build:css": "sass assets/scss:assets/css --stop-on-error --style=compressed --source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-ejs": "^5.1.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "ejs": "^3.1.9",
+    "sass": "^1.69.5"
   }
 }

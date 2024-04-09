@@ -1,3 +1,6 @@
+@use '../../foundation/var' as *;
+@use '../../foundation/mixin' as *;
+
 .p-scrap {
   margin-top: cs(90);
   @include blockCenter(cs($pcContWidth));
@@ -162,12 +165,12 @@
         @include ja(e);
         border-top: 10px solid #eaeaea;
         width: 100%;
-        border-top-left-radius: cs($bdrs / 2);
-        border-top-right-radius: cs($bdrs / 2);
+        border-top-left-radius: cs(calc($bdrs / 2));
+        border-top-right-radius: cs(calc($bdrs / 2));
 
         @include sp {
-          border-top-left-radius: csp($spBdrs / 2);
-          border-top-right-radius: csp($spBdrs / 2);
+          border-top-left-radius: csp(calc($spBdrs / 2));
+          border-top-right-radius: csp(calc($spBdrs / 2));
           border-width: 5px;
           @include fs(16);
           @include ja(e);

@@ -1,3 +1,6 @@
+@use '../../foundation/var' as *;
+@use '../../foundation/mixin' as *;
+
 .p-concept {
   margin-top: cs(15);
   border-radius: cs($bdrs);
@@ -11,7 +14,7 @@
   }
 
   &_inner {
-    border-radius: cs($bdrs / 2);
+    border-radius: cs(calc($bdrs / 2));
     background-color: $monoLight;
     padding-top: cs(80);
     padding-bottom: cs(228);
@@ -54,7 +57,7 @@
       transform: translateY(100%);
 
       @include sp {
-        border-width: csp(36) csp(116 / 2);
+        border-width: csp(36) csp(calc(116 / 2));
       }
     }
   }

@@ -1,3 +1,6 @@
+@use '../foundation/var' as *;
+@use '../foundation/mixin' as *;
+
 .l-header {
   position: fixed;
   top: 0;

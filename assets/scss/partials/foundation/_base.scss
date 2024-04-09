@@ -1,3 +1,6 @@
+@use 'var' as *;
+@use 'mixin' as *;
+
 body {
   position: relative;
   overflow-x: hidden;

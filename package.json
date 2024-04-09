@@ -4,9 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "dev": "sass --watch assets/scss:assets/css --style=compressed --source-map",
     "build": "npm run build:js && npm run build:css",
     "build:js": "ejs ejs/index.ejs -o ./index.html",
-    "build:css": "sass assets/scss/common.scss:assets/css/common.css assets/scss/top.scss:assets/css/top.css --stop-on-error",
+    "build:css": "sass assets/scss:assets/css --stop-on-error --style=compressed --source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

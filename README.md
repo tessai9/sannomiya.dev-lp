@@ -14,7 +14,7 @@
 ## How to start
 
 非常にシンプルな構成なため、簡単に開発を始められます  
-gulp taskによってファイル変更は監視されますが、HMRは無いので変更時は都度`index.html`を読み込み直してください
+HMRは無いので変更時は都度`index.html`を読み込み直してください
 
 1. clone repository
     ```
@@ -24,8 +24,8 @@ gulp taskによってファイル変更は監視されますが、HMRは無い�
     ```
     $ npm install
     ```
-1. run gulp task
+1. run scripts
     ```
-    $ npx gulp
+    $ npm run build
     ```
 1. open `index.html` on your browser

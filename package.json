@@ -1,8 +1,7 @@
 {
-  "name": "",
+  "name": "sannomiya.dev-lp",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
   "scripts": {
     "dev": "sass --watch assets/scss:assets/css --style=compressed --source-map",
     "build": "npm run build:js && npm run build:css",

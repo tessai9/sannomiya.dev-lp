@@ -12,6 +12,15 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="assets/js/common.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BJW5B14X56"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BJW5B14X56');
+  </script>
   <link rel='stylesheet' href='assets/css/common.css'>
   <link rel='stylesheet' href='assets/css/top.css'>
 </head>
@@ -134,13 +143,13 @@
       <li class='p-result_list'>
         <h4 class='p-result_list_title second'>これまで開催したイベント数</h4>
         <p class="p-result_list_number second">
-          <span class='num'>140</span><span class='unit'>回</span>
+          <span class='num'>143</span><span class='unit'>回</span>
         </p>
       </li>
       <li class='p-result_list'>
         <h4 class='p-result_list_title third'>コミュニティへの参加人数</h4>
         <p class="p-result_list_number third">
-          <span class='num'>205</span><span class='unit'>人</span>
+          <span class='num'>245</span><span class='unit'>人</span>
         </p>
       </li>
     </ul>
@@ -153,7 +162,7 @@
           <img src='assets/img/fig_what1.png' alt='' class="first">
         </figure>
         <p class="p-what_commu_text">
-          神戸三宮を拠点に、月１のペースで、もくもく会やLT大会を開催しているIT技術コミュニティです。
+          神戸三宮を拠点に、月１のペースで、もくもく会やLT大会を開催しているエンジニアコミュニティです。
         </p>
       </li>
       <li class='p-what_commu_list'>
@@ -169,7 +178,8 @@
           <img src='assets/img/fig_what3.png' alt='' class="third">
         </figure>
         <p class='p-what_commu_text'>
-          バックエンド～フロントエンドまで色んなモダンなWeb技術を積極的に勉強会のテーマに取り入れています。
+          バックエンド～フロントエンドまでWeb技術を中心とした色々なテーマを取り扱っています。
+          <br>
           <em>テーマ例：Rails、Flutter、Astro、Svelte.js</em>
         </p>
       </li>
@@ -218,10 +228,10 @@
       <div class='p-event_list_inner second'>
         <h3 class='p-event_list_title second'>もくもく会</h3>
         <p class='p-event_list_info'>
-          <span class='date'>2023/11/26（土） 14:00〜</span><span class='title twoRow'>もくもく会</span>
+          <span class='date'>2024/02/17（土） 14:00〜</span><span class='title twoRow'>もくもく会</span>
         </p>
         <p class='p-event_list_info'>
-          <span class='date'>2023/08/19（土） 14:00〜</span><span class='title'>もくもく会</span>
+          <span class='date'>2024/01/14（日） 14:00〜</span><span class='title'>新年もくもく会</span>
         </p>
       </div>
     </li>
@@ -229,10 +239,10 @@
       <div class='p-event_list_inner third'>
         <h3 class='p-event_list_title third'>勉強会</h3>
         <p class='p-event_list_info'>
-          <span class='date'>2023/04/26（水） 19:00〜</span><span class='title'>【三宮.dev オンライン】Webデザインのトレンドを追うLT会</span>
+          <span class='date'>2024/03/17（日） 19:00〜</span><span class='title'>【オンライン】mswとstorybookで始めるフロントエンドテスト</span>
         </p>
         <p class='p-event_list_info'>
-          <span class='date'>2023/02/25（土） 14:00〜</span><span class='title'>【オフライン開催】Astroハンズオン</span>
+          <span class='date'>2023/04/26（水） 19:00〜</span><span class='title'>【三宮.dev オンライン】Webデザインのトレンドを追うLT会</span>
         </p>
       </div>
     </li>
@@ -240,10 +250,10 @@
       <div class='p-event_list_inner fourth'>
         <h3 class='p-event_list_title fourth'>その他交流会</h3>
         <p class='p-event_list_info'>
-          <span class='date'>2023/10/14（土） 12:00〜</span><span class='title'>三宮.dev 活動5周年パーティー</span>
+          <span class='date'>2024/04/20（土） 14:00〜</span><span class='title'>【ごくごく会】細かすぎて伝わらないLT選手権@Hack.BAR</span>
         </p>
         <p class='p-event_list_info'>
-          <span class='date'>2023/07/01（土） 16:00〜</span><span class='title'>ごくごく会@HACK.BAR</span>
+          <span class='date'>2023/10/14（土） 12:00〜</span><span class='title'>三宮.dev 活動5周年パーティー</span>
         </p>
       </div>
     </li>
@@ -300,7 +310,7 @@
       <figure class='p-join_list_icon'>
         <img src='assets/img/fig_join2.svg' alt=''>
       </figure>
-      <p class="p-join_list_title second">IT技術などが<br>好きな方</p>
+      <p class="p-join_list_title second">ITなどの技術が<br>好きな方</p>
     </li>
     <li class='p-join_list'>
       <figure class='p-join_list_icon'>
@@ -334,16 +344,17 @@
     </h3>
     <ul class='p-request_detail_lists'>
       <li class='p-request_detail_list first'>
-        <h4 class='head first'>tenkawaさんの応募企画</h4>
+        <h4 class='head first'>t2yさんの応募企画</h4>
         <p class='title first'>
-          最近話題のアイツ!<br>
-          Flutterハンズオン
+          語り合おう！<br>
+          スクラム開発雑談会！
         </p>
       </li>
       <li class='p-request_detail_list second'>
-        <h4 class='head second'>Sanadiさんの応募企画</h4>
+        <h4 class='head second'>tenkawaさんの応募企画</h4>
         <p class='title second'>
-          Vue.jsハンズオン
+          mswとstorybookで始める<br>
+          フロントエンドテスト
         </p>
       </li>
       <li class='p-request_detail_list third'>

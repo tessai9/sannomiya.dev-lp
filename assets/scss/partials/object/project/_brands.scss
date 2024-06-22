@@ -1,0 +1,10 @@
+@use '../../foundation/var' as *;
+@use '../../foundation/mixin' as *;
+
+.p-brands {
+  @include blockCenter(cs($pcContWidth));
+
+  @include sp {
+    width: 100%;
+  }
+}

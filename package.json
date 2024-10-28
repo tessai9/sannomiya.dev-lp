@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "sass --watch assets/scss:assets/css --style=compressed --source-map",
     "build": "npm run build:js && npm run build:css",
-    "build:js": "ejs ejs/index.ejs -o ./index.html",
+    "build:js": "node build.js",
     "build:css": "sass assets/scss:assets/css --stop-on-error --style=compressed --source-map",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

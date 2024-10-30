@@ -17,7 +17,7 @@
   &_header {
     @include flexCenter(v);
     justify-content: space-between;
-    margin-bottom: cs(123);
+    margin-bottom: cs(70);
 
     @include sp {
       margin-bottom: csp(20);
@@ -112,10 +112,31 @@
     }
   }
 
-  &_event {
-    margin: cs(82) 0 0 auto;
-    padding: 0 cs(30);
+  &_links {
+    margin: 0 auto;
     width: cs(373);
+    display: flex;
+    justify-content: center;
+
+    @include sp {
+      // margin-top: csp(53);
+      // padding: 0 csp(25);
+      width: 100%;
+      justify-content: center;
+    }
+
+    .c-btn {
+      padding: cs(16) cs(20);
+
+      @include sp {
+        padding: csp(20);
+      }
+    }
+  }
+
+  &_apparel {
+    margin: calc(-1 * cs(50)) 0 0 auto;
+    width: cs(280);
     border: 2px solid $monoDark;
     border-radius: cs($bdrs);
     background-color: rgba($monoLight, 0.7);
@@ -123,8 +144,7 @@
     flex-flow: column;
 
     @include sp {
-      margin-top: csp(53);
-      padding: 0 csp(25);
+      margin-top: csp(70);
       width: 100%;
       border-radius: csp($spBdrs);
       border-width: 1px;
@@ -171,21 +191,19 @@
       }
     }
 
-    &_date {
-      padding: cs(9) 0;
-      @include fs(12);
-      @include ja(db);
-      border-bottom: 1px solid $monoDark;
+    // &_text {
+    //   padding: cs(9);
+    //   @include fs(12);
+    //   @include ja(db);
 
-      @include sp {
-        padding: csp(12) 0;
-        @include fs(14);
-        @include ja(m);
-        border-bottom: 1px dotted $monoDark;
-      }
-    }
+    //   @include sp {
+    //     padding: csp(12);
+    //     @include fs(14);
+    //     @include ja(m);
+    //   }
+    // }
 
-    &_name {
+    &_image {
       @include fs_lh(18, 1.7);
       margin-top: cs(12);
 

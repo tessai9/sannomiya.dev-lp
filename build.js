@@ -6,7 +6,7 @@ let data = {
   // Your data here
 };
 
-const fileNameList = ['index', 'apparel'];
+const fileNameList = ['index'];
 
 fileNameList.forEach(name => {
   const templateFile = `ejs/${name}.ejs`;

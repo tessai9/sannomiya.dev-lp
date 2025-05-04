@@ -1,7 +1,7 @@
-@import "partials/foundation/reset";
-@import "partials/foundation/base";
-@import "partials/object/utility/display";
+@use "partials/foundation/reset";
+@use "partials/foundation/base";
+@use "partials/object/utility/display";
 
-@import "partials/layout/header";
-@import "partials/layout/spmenu";
-@import "partials/layout/footer";
+@use "partials/layout/header";
+@use "partials/layout/spmenu";
+@use "partials/layout/footer";

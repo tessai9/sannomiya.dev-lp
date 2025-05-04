@@ -16,6 +16,6 @@
     "sass": "^1.77.5"
   },
   "devDependencies": {
-    "npm-check-updates": "^16.14.20"
+    "npm-check-updates": "^18.0.1"
   }
 }

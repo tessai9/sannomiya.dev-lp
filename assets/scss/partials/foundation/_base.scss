@@ -1,21 +1,21 @@
-@use 'var' as *;
-@use 'mixin' as *;
+@use 'var' as var;
+@use 'mixin' as mixin;
 
 body {
   position: relative;
   overflow-x: hidden;
   word-break: break-all;
-  @include ja(m);
-  padding: cs(15);
-  @include fs(16);
+  padding: mixin.cs(15);
   background: url(../img/bg_grid.png);
-  background-size: cs(30);
+  background-size: mixin.cs(30);
   background-attachment: fixed;
-  color: $monoDark;
+  color: var.$monoDark;
 
-  @include sp {
-    background-size: csp(20);
-    padding: csp($spd);
+  @include mixin.ja("m");
+  @include mixin.fs(16);
+  @include mixin.sp {
+    background-size: mixin.csp(20);
+    padding: mixin.csp(var.$spd);
   }
 }
 
@@ -50,7 +50,7 @@ textarea {
 }
 
 a[href*="tel"] {
-  @include pc {
+  @include mixin.pc {
     pointer-events: none;
     cursor: default;
   }

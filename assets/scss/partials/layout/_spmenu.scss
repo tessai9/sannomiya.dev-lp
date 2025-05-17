@@ -1,15 +1,15 @@
-@use '../foundation/var' as *;
-@use '../foundation/mixin' as *;
+@use '../foundation/var' as var;
+@use '../foundation/mixin' as mixin;
 
 .l-spmenu {
-  @include wh(100%, 100%);
+  @include mixin.wh(100%, 100%);
   position: fixed;
   top: 0;
   left: 0;
-  background: $gra1;
+  background: var.$gra1;
   z-index: 99999;
-  padding: csp(60) csp(63);
-  color: $monoLight;
+  padding: mixin.csp(60) mixin.csp(63);
+  color: var.$monoLight;
   display: none;
 
   &_links {
@@ -19,40 +19,38 @@
     &_link {
       display: block;
       text-align: center;
-      padding: csp(20) 0;
-      border-bottom: 1px solid $monoLight;
-      @include fs(20);
-      &:nth-child(4) {
+      padding: mixin.csp(20) 0;
+      border-bottom: 1px solid var.$monoLight;
+      @include mixin.fs(20);
+    }
+    &_link:nth-child(4) {
         border-bottom: none;
-      }
     }
 
     &_btn {
-      margin-top: csp(33);
-      border: 1px solid $monoLight;
-      border-radius: csp($spBdrs);
-      @include wh(100%, csp(58));
-      @include flexCenter(c);
-      @include fs(18);
-      @include ja(db);
-
       img {
-        width: csp(30);
-        margin-right: csp(15);
+        width: mixin.csp(30);
+        margin-right: mixin.csp(15);
       }
+      margin-top: mixin.csp(33);
+      border: 1px solid var.$monoLight;
+      border-radius: mixin.csp(var.$spBdrs);
+      @include mixin.wh(100%, mixin.csp(58));
+      @include mixin.flexCenter(c);
+      @include mixin.fs(18);
+      @include mixin.ja("db");
     }
   }
 
   &_close {
-    @include fs(18);
-    @include ja(db);
     text-align: center;
     display: block;
-    margin-top: csp(60);
-
-    span {
-      @include fs(20);
-      @include ja(b);
-    }
+    margin-top: mixin.csp(60);
+    @include mixin.fs(18);
+    @include mixin.ja("db");
+  }
+  &_close span {
+    @include mixin.fs(20);
+    @include mixin.ja("b");
   }
 }

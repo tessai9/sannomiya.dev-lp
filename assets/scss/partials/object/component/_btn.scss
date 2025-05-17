@@ -1,37 +1,44 @@
-@use '../../foundation/var' as *;
-@use '../../foundation/mixin' as *;
+@use '../../foundation/var' as var;
+@use '../../foundation/mixin' as mixin;
 
 .c-btn {
-  background: $gra2 no-repeat;
-  border: 2px solid $monoDark;
-  border-radius: cs($bdrs);
-  color: $monoLight;
-  @include fs(14);
+  background: var.$gra2 no-repeat;
+  border: 2px solid var.$monoDark;
+  border-radius: mixin.cs(var.$bdrs);
+  color: var.$monoLight;
   display: inline-flex;
   align-items: center;
   margin: 0 auto;
-  @include ja(db);
-  padding: cs(10) cs(26);
+  padding: mixin.cs(10) mixin.cs(26);
   transform: translateY(50%);
-  @include btnHover(rgba($monoDark, 0.1));
+  @include mixin.fs(14);
+  @include mixin.btnHover(rgba(var.$monoDark, 0.1));
+}
 
-  @include sp {
-    border: 1px solid $monoDark;
-    @include fs(14);
-    padding: csp(10) csp(26);
-    border-radius: csp($spBdrs);
+.c-btn {
+  @include mixin.ja("db");
+}
+
+.c-btn {
+  @include mixin.sp {
+    border: 1px solid var.$monoDark;
+    padding: mixin.csp(10) mixin.csp(26);
+    border-radius: mixin.csp(var.$spBdrs);
+    @include mixin.fs(14);
   }
+}
 
-  &:after {
-    content: "";
-    @include bgImg(cs(10), cs(14), "../img/arw_r.svg");
-    margin-left: cs(10);
-    position: relative;
-    top: 1px;
+.c-btn:after {
+  content: "";
+  margin-left: mixin.cs(10);
+  position: relative;
+  top: 1px;
+  @include mixin.bgImg(mixin.cs(10), mixin.cs(14), "../img/arw_r.svg");
+}
 
-    @include sp {
-      @include wh(csp(10), csp(14));
-      margin-left: csp(16);
-    }
+.c-btn:after {
+  @include mixin.sp {
+    margin-left: mixin.csp(16);
+    @include mixin.wh(mixin.csp(10), mixin.csp(14));
   }
 }

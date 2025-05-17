@@ -3,9 +3,9 @@
 
 .p-leader {
   &_detail {
-    @include flexCenter(v);
     justify-content: space-between;
 
+    @include flexCenter(v);
     @include sp {
       flex-flow: column;
       align-items: flex-start;
@@ -32,21 +32,21 @@
     }
 
     &_meta {
-      @include flexCenter(v);
       margin-bottom: cs(10);
 
+      @include flexCenter(v);
       @include sp {
         margin-bottom: csp(21);
       }
 
       .name {
-        @include fs(24);
-        @include ja(u);
         margin-right: cs(20);
 
+        @include fs(24);
+        @include ja("u");
         @include sp {
-          @include fs_lh(28, 1);
           margin-right: csp(25);
+          @include fs_lh(28, 1);
         }
       }
 

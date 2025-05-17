@@ -11,8 +11,8 @@
   }
 
   &_logo {
-    @include blockCenter(cs(676));
     transform: translateX(cs(14));
+    @include blockCenter(cs(676));
 
     @include sp {
       width: csp(235);
@@ -28,13 +28,13 @@
     }
 
     &_summary {
-      @include blockCenter(cs(500));
       border: 2px solid $monoDark;
       border-radius: cs($bdrs);
       padding: cs(22) cs(35);
       margin-bottom: cs(51);
       position: relative;
 
+      @include blockCenter(cs(500));
       @include sp {
         border: none;
         padding: 0;
@@ -44,11 +44,11 @@
 
       &:after {
         content: "";
-        @include absCenter(h);
         bottom: -2px;
         transform: translateY(100%);
-        @include wh(2px, cs(51));
         background-color: $monoDark;
+        @include absCenter(h);
+        @include wh(2px, cs(51));
 
         @include sp {
           display: none;
@@ -57,13 +57,13 @@
 
       .title {
         text-align: center;
-        @include fs(24);
-        @include ja(e);
         margin-bottom: cs(22);
+        @include fs(24);
+        @include ja("e");
 
         @include sp {
-          @include fs(20);
           margin-bottom: csp(28);
+          @include fs(20);
         }
       }
 
@@ -78,21 +78,6 @@
 
       .inner {
         position: relative;
-
-        &:before,
-        &:after {
-          position: absolute;
-          top: cs(68);
-          border: 2px solid $monoDark;
-          content: "";
-          @include wh(cs(124), cs(143));
-          border-bottom: none;
-
-          @include sp {
-            display: none;
-          }
-        }
-
         &:before {
           border-top-left-radius: cs($bdrs);
           border-right: none;
@@ -105,6 +90,20 @@
           border-left: none;
           right: cs(-35);
           transform: translateX(100%);
+        }
+
+        &:before,
+        &:after {
+          position: absolute;
+          top: cs(68);
+          border: 2px solid $monoDark;
+          content: "";
+          border-bottom: none;
+          @include wh(cs(124), cs(143));
+
+          @include sp {
+            display: none;
+          }
         }
       }
     }
@@ -133,7 +132,6 @@
       }
 
       @include sp {
-        @include blockCenter(csp(255));
         border-width: 1px;
         position: relative;
         border-radius: csp($spBdrs);
@@ -149,32 +147,34 @@
         }
 
         &:before {
-          @include absCenter(h);
-          @include wh(1px, csp(49));
           background-color: $monoDark;
           content: "";
           top: 0;
           transform: translateY(-100%);
+          @include absCenter(h);
+          @include wh(1px, csp(49));
         }
+
+        @include blockCenter(csp(255));
       }
 
       .title {
         align-self: start;
         padding: cs(22) cs(30);
-        @include fs(22);
-        @include ja(e);
         border-top: 10px solid #eaeaea;
         width: 100%;
         border-top-left-radius: cs(calc($bdrs / 2));
         border-top-right-radius: cs(calc($bdrs / 2));
+        @include fs(22);
+        @include ja("e");
 
         @include sp {
           border-top-left-radius: csp(calc($spBdrs / 2));
           border-top-right-radius: csp(calc($spBdrs / 2));
           border-width: 5px;
-          @include fs(16);
-          @include ja(e);
           padding: csp(20) csp(20) csp(10);
+          @include fs(16);
+          @include ja("e");
         }
       }
 

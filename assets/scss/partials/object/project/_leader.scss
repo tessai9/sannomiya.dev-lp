@@ -43,7 +43,11 @@
         margin-right: cs(20);
 
         @include fs(24);
+      }
+      .name {
         @include ja("u");
+      }
+      .name {
         @include sp {
           margin-right: csp(25);
           @include fs_lh(28, 1);

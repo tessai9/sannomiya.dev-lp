@@ -43,12 +43,14 @@
       text-align: center;
       color: $monoLight;
 
-      @include ja("b");
+      font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+      // @include ja("b");
       @include sp {
         padding: 0;
         transform: translateY(50%);
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N DB";
+        // @include ja("db");
         @include fs(16);
-        @include ja("db");
       }
 
       &.first {
@@ -100,8 +102,9 @@
 
       .num {
         margin-right: cs(4);
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N DB";
+        // @include ja("db");
         @include fs_lh(80, 1.3);
-        @include ja("db");
 
         @include sp {
           margin-right: csp(10);
@@ -109,7 +112,8 @@
       }
 
       .unit {
-        @include ja("h");
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N H";
+        // @include ja("h");
         @include fs(29);
       }
     }

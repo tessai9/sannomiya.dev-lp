@@ -88,8 +88,8 @@
 }
 
 @mixin fs_lh($fs, $lh) {
-  @include fs($fs);
   line-height: $lh;
+  @include fs($fs);
 }
 
 @mixin wh($w, $h) {
@@ -210,15 +210,14 @@
 }
 
 @mixin slickArrowReset {
-  @include absCenter(v);
   appearance: none;
   -webkit-appearance: none;
   border: none;
-  @include colorSet(transparent, transparent);
   padding: 0;
   z-index: 1;
-  @include hover;
   cursor: pointer;
+  @include colorSet(transparent, transparent);
+  @include absCenter(v);
 }
 
 @mixin textJustify {

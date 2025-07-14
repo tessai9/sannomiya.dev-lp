@@ -13,8 +13,9 @@
     border-radius: 100vw;
     display: inline-block;
     position: relative;
+    font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+    // @include ja("b");
     @include fs(18);
-    @include ja("b");
     @include sp {
       @include fs_lh(13, 1.6);
       padding: csp(5) csp(22) csp(7) csp(61);
@@ -118,8 +119,9 @@
       text-align: center;
       border-radius: 0 0 cs($bdrs) cs($bdrs);
 
+      font-family: "FOT-UD丸ゴ_ラージ Pr6N H";
+      // @include ja("h");
       @include fs_lh(21, 1.5);
-      @include ja("h");
       @include sp {
         padding: csp(20) 0;
         border-radius: 0 0 csp($spBdrs) csp($spBdrs);
@@ -151,7 +153,7 @@
       display: block;
 
       @include fs(16);
-      @include ja("b");
+      // @include ja("b");
       @include sp {
         @include fs(13);
       }

@@ -5,15 +5,11 @@
   margin-top: cs(90);
   @include blockCenter(cs($pcContWidth));
 
-  @include sp {
-    margin-top: csp(47);
-    width: 100%;
-  }
-
   &_logo {
     transform: translateX(cs(14));
     @include blockCenter(cs(676));
-
+  }
+  &_logo {
     @include sp {
       width: csp(235);
       transform: translateX(0);
@@ -33,14 +29,7 @@
       padding: cs(22) cs(35);
       margin-bottom: cs(51);
       position: relative;
-
       @include blockCenter(cs(500));
-      @include sp {
-        border: none;
-        padding: 0;
-        width: csp(305);
-        margin-bottom: csp(49);
-      }
 
       &:after {
         content: "";
@@ -49,7 +38,8 @@
         background-color: $monoDark;
         @include absCenter(h);
         @include wh(2px, cs(51));
-
+      }
+      &:after {
         @include sp {
           display: none;
         }
@@ -59,18 +49,25 @@
         text-align: center;
         margin-bottom: cs(22);
         @include fs(24);
-        @include ja("e");
-
+      }
+      .title {
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N E";
+        // @include ja("e");
+      }
+      .title {
         @include sp {
           margin-bottom: csp(28);
           @include fs(20);
         }
       }
-
       .text {
+        text-align: justify;
+        text-align-last: left;
+        font-feature-settings: "palt";
+        // @include textJustify;
         @include fs_lh(16, 2.2);
-        @include textJustify;
-
+      }
+      .text {
         @include sp {
           @include fs_lh(14, 2);
         }
@@ -100,18 +97,29 @@
           content: "";
           border-bottom: none;
           @include wh(cs(124), cs(143));
-
+        }
+        &:before,
+        &:after {
           @include sp {
             display: none;
           }
         }
       }
     }
+    &_summary {
+      @include sp {
+        border: none;
+        padding: 0;
+        width: csp(305);
+        margin-bottom: csp(49);
+      }
+    }
 
     &_lists {
       display: flex;
       justify-content: space-between;
-
+    }
+    &_lists {
       @include sp {
         flex-flow: column;
         margin-top: csp(-19);
@@ -131,6 +139,43 @@
         z-index: 1;
       }
 
+      .title {
+        align-self: start;
+        padding: cs(22) cs(30);
+        border-top: 10px solid #eaeaea;
+        width: 100%;
+        border-top-left-radius: cs(calc($bdrs / 2));
+        border-top-right-radius: cs(calc($bdrs / 2));
+        @include fs(22);
+      }
+      .title {
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N E";
+        // @include ja("e");
+      }
+      .title {
+        @include sp {
+          border-top-left-radius: csp(calc($spBdrs / 2));
+          border-top-right-radius: csp(calc($spBdrs / 2));
+          border-width: 5px;
+          padding: csp(20) csp(20) csp(10);
+          font-family: "FOT-UD丸ゴ_ラージ Pr6N E";
+          // @include ja("e");
+          @include fs(16);
+        }
+      }
+
+      .text {
+        padding: 0 cs(30);
+        @include fs_lh(16, 2);
+      }
+      .text {
+        @include sp {
+          padding: 0 csp(20);
+          @include fs_lh(12, 1.8);
+        }
+      }
+    }
+    &_list {
       @include sp {
         border-width: 1px;
         position: relative;
@@ -157,36 +202,13 @@
 
         @include blockCenter(csp(255));
       }
-
-      .title {
-        align-self: start;
-        padding: cs(22) cs(30);
-        border-top: 10px solid #eaeaea;
-        width: 100%;
-        border-top-left-radius: cs(calc($bdrs / 2));
-        border-top-right-radius: cs(calc($bdrs / 2));
-        @include fs(22);
-        @include ja("e");
-
-        @include sp {
-          border-top-left-radius: csp(calc($spBdrs / 2));
-          border-top-right-radius: csp(calc($spBdrs / 2));
-          border-width: 5px;
-          padding: csp(20) csp(20) csp(10);
-          @include fs(16);
-          @include ja("e");
-        }
-      }
-
-      .text {
-        padding: 0 cs(30);
-        @include fs_lh(16, 2);
-
-        @include sp {
-          padding: 0 csp(20);
-          @include fs_lh(12, 1.8);
-        }
-      }
     }
+  }
+}
+
+.p-scrap {
+  @include sp {
+    margin-top: csp(47);
+    width: 100%;
   }
 }

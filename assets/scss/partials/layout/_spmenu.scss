@@ -38,19 +38,28 @@
       @include mixin.wh(100%, mixin.csp(58));
       @include mixin.flexCenter(c);
       @include mixin.fs(18);
+    }
+    &_btn {
       @include mixin.ja("db");
     }
   }
+}
 
-  &_close {
-    text-align: center;
-    display: block;
-    margin-top: mixin.csp(60);
-    @include mixin.fs(18);
-    @include mixin.ja("db");
-  }
-  &_close span {
-    @include mixin.fs(20);
-    @include mixin.ja("b");
-  }
+.l-spmenu_close {
+  text-align: center;
+  display: block;
+  margin-top: mixin.csp(60);
+  @include mixin.fs(18);
+}
+
+.l-spmenu_close {
+  @include mixin.ja("db");
+}
+
+.l-spmenu_close span {
+  @include mixin.fs(20);
+}
+
+.l-spmenu_close span {
+  @include mixin.ja("b");
 }

@@ -1,24 +1,30 @@
-@use '../../foundation/var' as *;
-@use '../../foundation/mixin' as *;
+@use '../../foundation/var' as var;
+@use '../../foundation/mixin' as mixin;
 
 .p-copy {
-  margin-bottom: cs(113);
+  margin-bottom: mixin.cs(113);
   background: url(../img/bg_copy_pc.png) no-repeat bottom center/cover,
-    $gra1 no-repeat;
-  padding: cs(76) 0;
+    var.$gra1 no-repeat;
+  padding: mixin.cs(76) 0;
   text-align: center;
-  color: $monoLight;
-  border-radius: cs($bdrs);
+  color: var.$monoLight;
+  border-radius: mixin.cs(var.$bdrs);
 
-  @include fs_lh(40, 1.7);
-  @include ja("db");
-  @include sp {
-    margin-bottom: csp(62);
-    padding: csp(48) csp(25) csp(62);
-    border-radius: csp($spBdrs);
+  @include mixin.fs_lh(40, 1.7);
+}
+
+.p-copy {
+  @include mixin.ja("db");
+}
+
+.p-copy {
+    @include mixin.sp {
+    margin-bottom: mixin.csp(62);
+    padding: mixin.csp(48) mixin.csp(25) mixin.csp(62);
+    border-radius: mixin.csp(var.$spBdrs);
     text-align: left;
     background: url(../img/bg_copy_sp.png) no-repeat bottom center/cover,
-      $gra1 no-repeat;
-    @include fs(24);
+      var.$gra1 no-repeat;
+    @include mixin.fs(24);
   }
 }

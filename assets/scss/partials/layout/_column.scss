@@ -22,10 +22,11 @@
   padding: mixin.cs(8) mixin.cs(30) mixin.cs(10);
   display: inline-block;
   transform: translateY(-50%);
+  font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+  // @include ja("b");
 
   @include mixin.colorSet(var.$monoLight, var.$monoDark);
   @include mixin.fs(20);
-  @include mixin.ja("b");
   @include mixin.sp {
     border-radius: mixin.csp(var.$spBdrs);
     margin-bottom: mixin.csp(8);

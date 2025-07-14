@@ -1,5 +1,5 @@
-@use '../foundation/var' as *;
-@use '../foundation/mixin' as *;
+@use '../foundation/var' as var;
+@use '../foundation/mixin' as mixin;
 
 .l-header {
   position: fixed;
@@ -7,81 +7,81 @@
   z-index: 9999;
   width: 100%;
   left: 0;
-  background-color: rgba($monoLight, 0.8);
+  background-color: rgba(var.$monoLight, 0.8);
   backdrop-filter: blur(3px) brightness(95%) opacity(95%);
-  padding: cs(15);
-  @include flexCenter(v);
+  padding: mixin.cs(15);
   justify-content: space-between;
   transform: translateY(-100%);
   opacity: 0;
-  @include transition(#{transform, opacity});
+  @include mixin.flexCenter(v);
+  @include mixin.transition(#{transform, opacity});
 
-  @include sp {
-    padding: csp(15);
+  @include mixin.sp {
+    padding: mixin.csp(15);
   }
 
   &.isShown {
     transform: translateY(0);
     opacity: 1;
-    @include transition(#{transform, opacity});
+    @include mixin.transition(#{transform, opacity});
   }
+}
 
-  &_logo {
-    width: cs(150);
-    @include rotateHover;
+.l-header_logo {
+  width: mixin.cs(150);
+  @include mixin.rotateHover;
+  @include mixin.sp {
+    width: mixin.csp(97);
+  }
+}
 
-    @include sp {
-      width: csp(97);
+.l-header_menubar {
+  display: block;
+  position: relative;
+
+  span {
+    background-color: var.$monoDark;
+    height: 1px;
+    position: absolute;
+    left: mixin.csp(8);
+
+    &:nth-child(1) {
+      width: mixin.csp(24);
+      top: mixin.csp(16);
+    }
+
+    &:nth-child(2) {
+      width: mixin.csp(12);
+      top: mixin.csp(24);
     }
   }
 
-  &_menubar {
-    @include wh(csp(40), csp(40));
-    display: block;
+  @include mixin.wh(mixin.csp(40), mixin.csp(40));
+}
+
+.l-header_navs {
+  justify-content: flex-end;
+  @include mixin.flexCenter(v);
+}
+
+.l-header_navs_link {
+  margin-left: mixin.cs(30);
+  @include mixin.rotateHover;
+}
+
+.l-header_navs_btn {
+  margin-left: mixin.cs(30);
+  border-radius: mixin.cs(var.$bdrs);
+  border: 1px solid var.$monoDark;
+  color: var.$monoDark;
+  padding: mixin.cs(10) mixin.cs(16);
+
+  img {
+    margin-right: mixin.cs(12);
     position: relative;
-
-    span {
-      background-color: $monoDark;
-      height: 1px;
-      position: absolute;
-      left: csp(8);
-
-      &:nth-child(1) {
-        width: csp(24);
-        top: csp(16);
-      }
-
-      &:nth-child(2) {
-        width: csp(12);
-        top: csp(24);
-      }
-    }
+    top: 1px;
+    width: mixin.cs(24);
   }
-
-  &_navs {
-    @include flexCenter(v);
-    justify-content: flex-end;
-
-    &_link {
-      margin-left: cs(30);
-      @include rotateHover;
-    }
-
-    &_btn {
-      margin-left: cs(30);
-      @include flexCenter(v);
-      border-radius: cs($bdrs);
-      border: 1px solid $monoDark;
-      color: $monoDark;
-      padding: cs(10) cs(16);
-      @include btnHover(rgba($monoDark, 0.1));
-
-      img {
-        margin-right: cs(12);
-        position: relative;
-        top: 1px;
-        width: cs(24);
-      }
-    }
-  }
+  @include mixin.flexCenter(v);
+  @include mixin.btnHover(rgba(var.$monoDark, 0.1));
 }

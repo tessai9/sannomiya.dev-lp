@@ -9,13 +9,13 @@
   }
 
   &_reco {
-    @include fs(18);
-    @include ja(b);
     padding: cs(12) cs(18) cs(12) cs(66);
     border-radius: 100vw;
     display: inline-block;
     position: relative;
-
+    font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+    // @include ja("b");
+    @include fs(18);
     @include sp {
       @include fs_lh(13, 1.6);
       padding: csp(5) csp(22) csp(7) csp(61);
@@ -28,45 +28,43 @@
     }
 
     &:before {
-      @include wh(cs(44), cs(44));
       border-radius: 100vw;
       left: cs(6);
 
+      @include wh(cs(44), cs(44));
       @include sp {
-        @include wh(csp(44), csp(44));
         left: csp(5);
+        @include wh(csp(44), csp(44));
       }
     }
 
     &:after {
-      @include bgImg(cs(20), cs(20), "../img/icon_thumb.svg");
       left: cs(18);
 
+      @include bgImg(cs(20), cs(20), "../img/icon_thumb.svg");
       @include sp {
-        @include wh(csp(19), csp(19));
         left: csp(17);
+        @include wh(csp(19), csp(19));
       }
     }
 
     &.first {
-      @include colorSet(#518e0a, #dbffb2);
       margin-bottom: cs(15);
-
-      @include sp {
-        margin-bottom: csp(15);
-      }
-
       &:before {
         background-color: $accentColor2;
+      }
+
+      @include colorSet(#518e0a, #dbffb2);
+      @include sp {
+        margin-bottom: csp(15);
       }
     }
 
     &.second {
-      @include colorSet(#1372ad, #d1edff);
-
       &:before {
         background-color: $accentColor3;
       }
+      @include colorSet(#1372ad, #d1edff);
     }
   }
 
@@ -118,11 +116,12 @@
 
     &_title {
       padding: cs(18);
-      @include fs_lh(21, 1.5);
-      @include ja(h);
       text-align: center;
       border-radius: 0 0 cs($bdrs) cs($bdrs);
 
+      font-family: "FOT-UD丸ゴ_ラージ Pr6N H";
+      // @include ja("h");
+      @include fs_lh(21, 1.5);
       @include sp {
         padding: csp(20) 0;
         border-radius: 0 0 csp($spBdrs) csp($spBdrs);
@@ -151,10 +150,10 @@
 
     .title {
       font-style: normal;
-      @include fs(16);
-      @include ja(b);
       display: block;
 
+      @include fs(16);
+      // @include ja("b");
       @include sp {
         @include fs(13);
       }

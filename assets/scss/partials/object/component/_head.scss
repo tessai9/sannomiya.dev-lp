@@ -1,22 +1,27 @@
-@use '../../foundation/var' as *;
-@use '../../foundation/mixin' as *;
+@use '../../foundation/var' as var;
+@use '../../foundation/mixin' as mixin;
 
 .c-head {
-  @include fs(120);
-  @include ja(l);
-  color: rgba($monoDark, 0.1);
+  color: rgba(var.$monoDark, 0.1);
   margin: 0 auto;
-  padding: cs(160) 0 cs(90);
-  @include blockCenter(cs($pcContWidth));
+  padding: mixin.cs(160) 0 mixin.cs(90);
+  @include mixin.blockCenter(mixin.cs(var.$pcContWidth));
+  @include mixin.fs(120);
+}
 
-  @include sp {
+.c-head {
+  @include mixin.ja("l");
+}
+
+.c-head {
+  @include mixin.sp {
     width: 100%;
-    padding: csp(80) 0 csp(45);
-    color: rgba($monoDark, 0.2);
-    @include fs(50);
+    padding: mixin.csp(80) 0 mixin.csp(45);
+    color: rgba(var.$monoDark, 0.2);
+    @include mixin.fs(50);
 
     &-spS {
-      @include fs(40);
+      @include mixin.fs(40);
     }
   }
 }

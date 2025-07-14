@@ -27,21 +27,22 @@
     }
 
     &_btn {
-      @include wh(cs(255), cs(80));
       border-radius: cs($bdrs);
       box-shadow: 0 3px 0 $monoDark;
       background-color: rgba($monoDark, 0.9);
+      @include wh(cs(255), cs(80));
       @include flexCenter(c);
       @include transition(#{transform, box-shadow});
 
       @include sp {
-        @include wh(csp(165), csp(50));
         border-radius: csp($spBdrs);
         box-shadow: 0 2px 0 $monoDark;
 
         &:nth-child(n + 3) {
           margin-top: csp(15);
         }
+
+        @include wh(csp(165), csp(50));
       }
 
       &.discord {
@@ -54,9 +55,9 @@
 
         @include pc {
           &:hover {
-            @include transition(#{transform, box-shadow});
             box-shadow: 0 0 0 #3a42a0;
             transform: translateY(2px);
+            @include transition(#{transform, box-shadow});
           }
         }
 
@@ -79,9 +80,9 @@
 
         @include pc {
           &:hover {
-            @include transition(#{transform, box-shadow});
             box-shadow: 0 0 0 #430f4a;
             transform: translateY(2px);
+            @include transition(#{transform, box-shadow});
           }
         }
 
@@ -104,9 +105,9 @@
 
         @include pc {
           &:hover {
-            @include transition(#{transform, box-shadow});
             box-shadow: 0 0 0 #d1d1d1;
             transform: translateY(2px);
+            @include transition(#{transform, box-shadow});
           }
         }
 
@@ -129,9 +130,9 @@
 
         @include pc {
           &:hover {
-            @include transition(#{transform, box-shadow});
             box-shadow: 0 0 0 #e0e0e0;
             transform: translateY(2px);
+            @include transition(#{transform, box-shadow});
           }
         }
 

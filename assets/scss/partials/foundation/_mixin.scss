@@ -1,26 +1,26 @@
 // webフォント
-@use 'var' as *;
+@use 'var' as var;
 
 @mixin ja($w: m) {
-  @if $w == m {
+  @if $w == "m" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N M";
   }
-  @if $w == l {
+  @if $w == "l" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N L";
   }
-  @if $w == db {
+  @if $w == "db" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N DB";
   }
-  @if $w == e {
+  @if $w == "e" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N E";
   }
-  @if $w == b {
+  @if $w == "b" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
   }
-  @if $w == h {
+  @if $w == "h" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N H";
   }
-  @if $w == u {
+  @if $w == "u" {
     font-family: "FOT-UD丸ゴ_ラージ Pr6N U";
   }
 }
@@ -33,7 +33,6 @@
   } @else {
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    /* Change the line bellow to see the magic! */
     -webkit-line-clamp: $lines;
     overflow: hidden;
     text-overflow: unset;
@@ -44,7 +43,7 @@
 // convert size
 @function cs($size) {
   // フルレスポンシブ対応
-  @return calc($size / $pc) * 100 + vw;
+  @return calc($size / var.$pc) * 100 + vw;
 }
 
 @mixin ls($value) {
@@ -53,22 +52,22 @@
 
 // convert size sp
 @function csp($size) {
-  @return calc($size / $sp) * 100 + vw;
+  @return calc($size / var.$sp) * 100 + vw;
 }
 
-@function get_vw($size, $viewport: $sp) {
+@function get_vw($size, $viewport: var.$sp) {
   $rate: calc(100 / $viewport);
   @return calc($rate * $size) * 1vw;
 }
 
 @mixin sp {
-  @media screen and (max-width: ($bp + px)) {
+  @media screen and (max-width: (var.$bp + px)) {
     @content;
   }
 }
 
 @mixin pc {
-  @media screen and (min-width: (($bp + 1) + px)) {
+  @media screen and (min-width: ((var.$bp + 1) + px)) {
     @content;
   }
 }
@@ -89,8 +88,8 @@
 }
 
 @mixin fs_lh($fs, $lh) {
-  @include fs($fs);
   line-height: $lh;
+  @include fs($fs);
 }
 
 @mixin wh($w, $h) {
@@ -136,24 +135,10 @@
   transition-property: $prop;
 }
 
-@mixin transition($prop, $time: $transTime) {
+@mixin transition($prop, $time: var.$transTime) {
   @include transProp($prop);
   transition-duration: $time;
 }
-
-// @mixin hover($opacity: 0.5) {
-//   @include transition(opacity);
-//   opacity: 1;
-
-//   &:hover {
-//     @include transition(opacity);
-//     opacity: $opacity;
-
-//     @include sp {
-//       opacity: 1;
-//     }
-//   }
-// }
 
 @mixin absCenter($direction) {
   position: absolute;
@@ -225,15 +210,14 @@
 }
 
 @mixin slickArrowReset {
-  @include absCenter(v);
   appearance: none;
   -webkit-appearance: none;
   border: none;
-  @include colorSet(transparent, transparent);
   padding: 0;
   z-index: 1;
-  @include hover;
   cursor: pointer;
+  @include colorSet(transparent, transparent);
+  @include absCenter(v);
 }
 
 @mixin textJustify {

@@ -3,12 +3,14 @@
 
 .p-event {
   &_lists {
-    @include blockCenter(cs($pcContWidth));
     border: 2px solid $monoDark;
     border-radius: cs($bdrs);
     display: flex;
     flex-wrap: wrap;
 
+    @include blockCenter(cs($pcContWidth));
+  }
+  &_lists {
     @include sp {
       width: 100%;
       border-width: 1px;
@@ -56,14 +58,11 @@
       align-items: center;
       padding: 0 cs(30) cs(30);
 
-      @include sp {
-        padding: 0 csp(20) csp(24);
-      }
-
       &.first {
         background-color: #fff3ef;
         border-top-left-radius: cs($bdrs);
-
+      }
+      &.first {
         @include sp {
           border-top-left-radius: csp($spBdrs);
           border-top-right-radius: csp($spBdrs);
@@ -72,7 +71,8 @@
       &.second {
         background-color: #edf8ff;
         border-top-right-radius: cs($bdrs);
-
+      }
+      &.second {
         @include sp {
           border-radius: 0;
         }
@@ -80,7 +80,8 @@
       &.third {
         background-color: #ecffd6;
         border-bottom-left-radius: cs($bdrs);
-
+      }
+      &.third {
         @include sp {
           border-radius: 0;
         }
@@ -88,31 +89,27 @@
       &.fourth {
         background-color: #fff9f2;
         border-bottom-right-radius: cs($bdrs);
-
+      }
+      &.fourth {
         @include sp {
           border-bottom-left-radius: csp($spBdrs);
           border-bottom-right-radius: csp($spBdrs);
         }
       }
     }
+    &_inner {
+      @include sp {
+        padding: 0 csp(20) csp(24);
+      }
+    }
 
     &_title {
       color: $monoLight;
-      @include fs(15);
-      @include ja(b);
       padding: cs(3) cs(30) cs(6);
       text-align: center;
       border-bottom-left-radius: cs($bdrs);
       border-bottom-right-radius: cs($bdrs);
       transform: translateY(cs(-12));
-
-      @include sp {
-        padding: csp(6) csp(25) csp(8);
-        transform: translateY(csp(-10));
-        border-bottom-left-radius: csp($spBdrs);
-        border-bottom-right-radius: csp($spBdrs);
-      }
-
       &.first {
         background-color: $mainColorDark;
       }
@@ -125,21 +122,31 @@
       &.fourth {
         background-color: $mainColor;
       }
+
+      @include fs(15);
+    }
+    &_title {
+      @include ja("b");
+    }
+    &_title {
+      @include sp {
+        padding: csp(6) csp(25) csp(8);
+        transform: translateY(csp(-10));
+        border-bottom-left-radius: csp($spBdrs);
+        border-bottom-right-radius: csp($spBdrs);
+      }
     }
 
     &_info {
       margin-top: cs(10);
       width: 100%;
 
-      @include sp {
-        margin-top: csp(10);
-      }
-
       &:last-child {
         border-top: 2px dotted $monoDark;
         margin-top: cs(16);
         padding-top: cs(20);
-
+      }
+      &:last-child {
         @include sp {
           border-width: 1px;
           margin-top: csp(20);
@@ -152,29 +159,39 @@
 
         &.date {
           @include fs(10);
-          @include ja(db);
-
+        }
+        &.date {
+          @include ja("db");
+        }
+        &.date {
           @include sp {
-            @include ja(db);
+            @include ja("db");
           }
         }
 
         &.title {
-          @include fs_lh(14, 2);
           margin-top: cs(6);
 
+          @include fs_lh(14, 2);
           &.twoRow {
             height: cs(54);
-
+          }
+          &.twoRow {
             @include sp {
               height: unset;
             }
           }
-
+        }
+        &.title {
           @include sp {
             margin-top: csp(6);
           }
         }
+      }
+    }
+    &_info {
+      @include sp {
+        margin-top: csp(10);
       }
     }
   }

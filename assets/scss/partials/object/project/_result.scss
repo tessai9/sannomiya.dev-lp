@@ -3,9 +3,9 @@
 
 .p-result {
   &_logo {
-    @include blockCenter(cs(300));
     margin-bottom: cs(54);
 
+    @include blockCenter(cs(300));
     @include sp {
       margin-top: csp(5);
       margin-bottom: csp(31);
@@ -29,26 +29,28 @@
     overflow: hidden;
 
     @include sp {
-      @include blockCenter(csp(265));
       border-radius: cs($spBdrs);
       overflow: visible;
 
       &:not(:last-child) {
         margin-bottom: csp(25);
       }
+      @include blockCenter(csp(265));
     }
 
     &_title {
       padding: cs(12) 0;
       text-align: center;
-      @include ja(b);
       color: $monoLight;
 
+      font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+      // @include ja("b");
       @include sp {
         padding: 0;
         transform: translateY(50%);
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N DB";
+        // @include ja("db");
         @include fs(16);
-        @include ja(db);
       }
 
       &.first {
@@ -78,9 +80,9 @@
 
     &_number {
       padding: cs(12) 0 cs(20);
-      @include flexCenter(h);
       align-items: flex-end;
 
+      @include flexCenter(h);
       @include sp {
         border-radius: csp($spBdrs);
         padding: csp(20) 0;
@@ -99,9 +101,10 @@
       }
 
       .num {
-        @include fs_lh(80, 1.3);
-        @include ja(db);
         margin-right: cs(4);
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N DB";
+        // @include ja("db");
+        @include fs_lh(80, 1.3);
 
         @include sp {
           margin-right: csp(10);
@@ -109,7 +112,8 @@
       }
 
       .unit {
-        @include ja(h);
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N H";
+        // @include ja("h");
         @include fs(29);
       }
     }

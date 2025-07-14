@@ -1,35 +1,36 @@
-@use '../foundation/var' as *;
-@use '../foundation/mixin' as *;
+@use '../foundation/var' as var;
+@use '../foundation/mixin' as mixin;
 
 .l-column {
-  @include blockCenter(cs(860));
-  border-radius: cs($bdrs);
-  background-color: $monoLight;
-  box-shadow: 0 cs(10) cs(20) rgba($monoDark, 0.06);
-  padding: 0 cs(40) cs(40);
+  border-radius: mixin.cs(var.$bdrs);
+  background-color: var.$monoLight;
+  box-shadow: 0 mixin.cs(10) mixin.cs(20) rgba(var.$monoDark, 0.06);
+  padding: 0 mixin.cs(40) mixin.cs(40);
 
-  @include sp {
+  @include mixin.blockCenter(mixin.cs(860));
+  @include mixin.sp {
     width: 100%;
-    border-radius: csp($spBdrs);
-    box-shadow: 0 csp(5) csp(10) rgba($monoDark, 0.06);
-    padding: 0 csp(20) csp(25);
+    border-radius: mixin.csp(var.$spBdrs);
+    box-shadow: 0 mixin.csp(5) mixin.csp(10) rgba(var.$monoDark, 0.06);
+    padding: 0 mixin.csp(20) mixin.csp(25);
   }
+}
 
-  &_title {
-    margin-bottom: cs(7);
-    @include colorSet($monoLight, $monoDark);
-    border-radius: cs($bdrs);
-    padding: cs(8) cs(30) cs(10);
-    @include fs(20);
-    @include ja(b);
-    display: inline-block;
-    transform: translateY(-50%);
+.l-column_title {
+  margin-bottom: mixin.cs(7);
+  border-radius: mixin.cs(var.$bdrs);
+  padding: mixin.cs(8) mixin.cs(30) mixin.cs(10);
+  display: inline-block;
+  transform: translateY(-50%);
+  font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+  // @include ja("b");
 
-    @include sp {
-      border-radius: csp($spBdrs);
-      @include fs(15);
-      margin-bottom: csp(8);
-      padding: csp(6) csp(20) csp(8);
-    }
+  @include mixin.colorSet(var.$monoLight, var.$monoDark);
+  @include mixin.fs(20);
+  @include mixin.sp {
+    border-radius: mixin.csp(var.$spBdrs);
+    margin-bottom: mixin.csp(8);
+    padding: mixin.csp(6) mixin.csp(20) mixin.csp(8);
+    @include mixin.fs(15);
   }
 }

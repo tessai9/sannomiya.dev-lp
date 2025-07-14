@@ -10,65 +10,65 @@
     }
 
     &_title {
-      @include flexCenter(v);
       width: cs(454);
       padding-right: cs(30);
-      @include fs_lh(22, 1.6);
-      @include ja(u);
       color: $monoLight;
       background: linear-gradient(to right, #ff9710, #ff9610 40%, #ffc400);
       border-radius: 100vw;
       margin: 0 auto cs(50);
       position: relative;
       z-index: 1;
-
-      @include sp {
-        width: 100%;
-        padding-right: csp(30);
-        @include fs(16);
-        margin-bottom: csp(40);
-        background: #ff9610;
-      }
-
       &:before,
       &:after {
         content: "";
       }
 
+      font-family: "FOT-UD丸ゴ_ラージ Pr6N U";
+      // @include ja("u");
+      @include flexCenter(v);
+      @include fs_lh(22, 1.6);
+      @include sp {
+        width: 100%;
+        padding-right: csp(30);
+        margin-bottom: csp(40);
+        background: #ff9610;
+        @include fs(16);
+      }
+
       &:before {
         display: block;
-        @include bgImg(cs(99), cs(99), "../img/icon_check.svg");
         margin-right: cs(16);
 
+        @include bgImg(cs(99), cs(99), "../img/icon_check.svg");
         @include sp {
-          @include wh(csp(79), csp(79));
           margin-right: csp(14);
+          @include wh(csp(79), csp(79));
         }
       }
 
       &:after {
-        @include wh(4px, cs(50));
         background-color: #ff9b0e;
-        @include absCenter(h);
         bottom: 0;
         transform: translateY(100%);
 
+        @include wh(4px, cs(50));
+        @include absCenter(h);
         @include sp {
-          @include wh(3px, csp(448));
           background: linear-gradient(to bottom, #ff9e0d, #ffb106 40%, #ffc200);
           left: csp(40);
           right: unset;
           top: csp(79);
           transform: translateY(0);
+          @include wh(3px, csp(448));
         }
       }
     }
 
     &_lists {
-      @include blockCenter(cs($pcContWidth));
       display: flex;
       justify-content: space-between;
 
+      @include blockCenter(cs($pcContWidth));
       @include sp {
         width: auto;
         flex-flow: column;
@@ -80,12 +80,12 @@
       width: cs(332);
       border: 4px solid $monoDark;
       border-radius: cs($bdrs * 2);
-      @include flexCenter(v);
       flex-flow: column;
       padding: cs(4) cs(16) cs(16);
       background-color: $monoLight;
       position: relative;
 
+      @include flexCenter(v);
       @include sp {
         width: csp(232);
         margin-right: csp(30);
@@ -110,31 +110,31 @@
 
       &:before {
         top: -2px;
-        @include wh(cs(23), cs(23));
         border-radius: 100vw;
         border: 4px solid $monoDark;
         transform: translateY(-50%);
         background-color: $monoLight;
 
+        @include wh(cs(23), cs(23));
         @include sp {
           @include wh(csp(21), csp(21));
           border-width: 3px;
           transform: translateY(0);
-          @include absCenter(v);
           left: csp(-55);
           background-color: $monoLight;
           z-index: 999;
+          @include absCenter(v);
         }
       }
 
       @include sp {
         &:after {
-          @include wh(csp(44), 3px);
           background-color: $monoDark;
-          @include absCenter(v);
           left: 0;
           transform: translateX(-100%);
           content: "";
+          @include wh(csp(44), 3px);
+          @include absCenter(v);
         }
       }
 
@@ -142,10 +142,10 @@
       &.third {
         &:after {
           @include pc {
-            @include wh(cs(152), cs(92));
             top: calc(-4px + #{cs(-8)});
             border: 4px solid $monoDark;
             border-bottom: none;
+            @include wh(cs(152), cs(92));
           }
         }
       }
@@ -234,10 +234,11 @@
       }
 
       .head {
-        @include fs(18);
-        @include ja(u);
         transform: translateY(50%);
 
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N U";
+        // @include ja("u");
+        @include fs(18);
         @include sp {
           @include fs(13);
         }
@@ -267,15 +268,20 @@
 
       .title {
         padding: cs(27) cs(20) cs(18);
-        @include fs_lh(18, 1.7);
-        @include flexCenter(c);
-        @include wh(100%, 100%);
         border-radius: 0 0 cs($bdrs) cs($bdrs);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // @include flexCenter(c);
+        width: 100%;
+        height: 100%;
+        // @include wh(100%, 100%);
+        @include fs_lh(18, 1.7);
 
         @include sp {
           padding: csp(24) csp(10);
-          @include fs(14);
           border-radius: 0 0 csp($spBdrs) csp($spBdrs);
+          @include fs(14);
         }
 
         &.first {

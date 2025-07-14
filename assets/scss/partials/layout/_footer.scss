@@ -6,15 +6,16 @@
   border-radius: cs($bdrs);
   color: $monoLight;
   background: $gra1;
-  @include fs(14);
-  @include ja(u);
   text-align: center;
   padding: cs(16) 0;
 
+  font-family: "FOT-UD丸ゴ_ラージ Pr6N U";
+  // @include ja("u");
+  @include fs(14);
   @include sp {
     margin-top: csp(82);
     border-radius: csp($spBdrs);
-    @include fs(12);
     padding: csp(8) 0;
+    @include fs(12);
   }
 }

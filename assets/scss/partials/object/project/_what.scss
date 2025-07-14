@@ -10,8 +10,8 @@
   }
 
   &_commu {
-    @include blockCenter(cs($pcContWidth));
     margin-top: cs(90);
+    @include blockCenter(cs($pcContWidth));
 
     @include sp {
       width: 100%;
@@ -19,9 +19,9 @@
     }
 
     &_title {
-      @include flexCenter(h);
       margin-bottom: cs(49);
       position: relative;
+      @include flexCenter(h);
 
       @include sp {
         @include fs(17);
@@ -30,11 +30,11 @@
 
       &:after {
         content: "";
-        @include absCenter(h);
-        @include wh(2px, cs(49));
         background-color: $monoDark;
         bottom: 1px;
         transform: translateY(100%);
+        @include absCenter(h);
+        @include wh(2px, cs(49));
 
         @include sp {
           @include wh(1px, csp(30));
@@ -42,32 +42,18 @@
       }
 
       span {
-        @include fs(22);
         padding: cs(12) cs(30);
         text-align: center;
         border: 2px solid $monoDark;
         border-radius: cs($bdrs);
         position: relative;
+        @include fs(22);
 
         @include sp {
-          @include fs(17);
           padding: csp(10) csp(50);
           border-width: 1px;
           border-radius: csp($spBdrs);
-        }
-
-        &:before,
-        &:after {
-          position: absolute;
-          top: cs(32);
-          border: 2px solid $monoDark;
-          content: "";
-          @include wh(cs(168), cs(81));
-          border-bottom: none;
-
-          @include sp {
-            display: none;
-          }
+          @include fs(17);
         }
 
         &:before {
@@ -82,6 +68,20 @@
           border-left: none;
           right: 0;
           transform: translateX(100%);
+        }
+
+        &:before,
+        &:after {
+          position: absolute;
+          top: cs(32);
+          border: 2px solid $monoDark;
+          content: "";
+          border-bottom: none;
+          @include wh(cs(168), cs(81));
+
+          @include sp {
+            display: none;
+          }
         }
       }
     }
@@ -114,11 +114,11 @@
           margin-bottom: csp(30);
 
           &:after {
-            @include absCenter(h);
             content: "";
             background-color: $monoDark;
             bottom: 0;
             transform: translateY(100%);
+            @include absCenter(h);
             @include wh(1px, csp(30));
           }
         }
@@ -126,9 +126,9 @@
     }
 
     &_image {
-      @include flexCenter(c);
       background-color: #fffbf8;
       height: cs(209);
+      @include flexCenter(c);
 
       @include sp {
         height: csp(195);
@@ -176,15 +176,17 @@
       }
 
       em {
-        @include fs(11);
-        @include ja(b);
         font-style: normal;
         color: $mainColor;
+        font-family: "FOT-UD丸ゴ_ラージ Pr6N B";
+        // @include ja("b");
+        @include fs(11);
 
         @include sp {
-          @include fs(12);
-          @include ja(db);
           display: block;
+          font-family: "FOT-UD丸ゴ_ラージ Pr6N DB";
+          // @include ja("db");
+          @include fs(12);
         }
       }
     }

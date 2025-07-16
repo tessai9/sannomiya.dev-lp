@@ -10,7 +10,7 @@
   align-items: center;
   margin: 0 auto;
   padding: mixin.cs(10) mixin.cs(26);
-  transform: translateY(50%);
+  transform: translateY(30%);
   @include mixin.fs(14);
   @include mixin.btnHover(rgba(var.$monoDark, 0.1));
 }

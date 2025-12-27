@@ -9,10 +9,28 @@ $(function () {
   $('a[href^="#"]').click(function () {
     const speed = 500;
     const href = $(this).attr("href");
-    const target = $(href == "#" || href == "" ? "html" : href);
-    const position = target.offset().top;
-    $("html, body").animate({ scrollTop: position }, speed, "swing");
-    $(".js-menu").fadeOut();
+    // Security fix: Sanitize href to prevent DOM-based XSS
+    // Only allow valid ID selectors (alphanumeric, hyphen, underscore)
+    if (href === "#" || href === "") {
+      const target = $("html");
+      const position = target.offset().top;
+      $("html, body").animate({ scrollTop: position }, speed, "swing");
+      $(".js-menu").fadeOut();
+      return false;
+    }
+    // Validate that href is a valid ID selector
+    const id = href.substring(1); // Remove the # prefix
+    if (!/^[a-zA-Z0-9_-]+$/.test(id)) {
+      // Invalid ID, reject it
+      return false;
+    }
+    // Use document.getElementById for safe DOM access
+    const element = document.getElementById(id);
+    if (element) {
+      const position = $(element).offset().top;
+      $("html, body").animate({ scrollTop: position }, speed, "swing");
+      $(".js-menu").fadeOut();
+    }
     return false;
   });
 

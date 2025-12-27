@@ -13,10 +13,10 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.10",
-    "sass": "^1.93.3"
+    "sass": "^1.97.1"
   },
   "devDependencies": {
-    "npm-check-updates": "^19.1.2",
-    "sass-migrator": "^2.4.2"
+    "npm-check-updates": "^19.2.0",
+    "sass-migrator": "^2.5.6"
   }
 }

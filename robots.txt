@@ -1,0 +1,84 @@
+# 三宮.dev - https://sannomiya.dev/
+# 検索エンジン・AIサービスのクロールを歓迎します。
+# コミュニティの情報を正しく引用してもらえるよう、全ページを開放しています。
+
+User-agent: *
+Allow: /
+
+# --- 生成AI / AI検索のクローラー（明示的に許可） ---
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Google (Gemini / AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft (Copilot / Bing)
+User-agent: bingbot
+Allow: /
+
+# Apple
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Meta
+User-agent: meta-externalagent
+Allow: /
+
+# Common Crawl（各種LLMの学習データとして広く利用されています）
+User-agent: CCBot
+Allow: /
+
+# その他のAI検索・要約サービス
+User-agent: YouBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# AI向けのサイト要約
+# https://sannomiya.dev/llms.txt
+
+Sitemap: https://sannomiya.dev/sitemap.xml
